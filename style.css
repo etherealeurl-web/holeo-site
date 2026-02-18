@@ -4223,3 +4223,440 @@ img {
         flex-direction: column;
     }
 }
+
+/* =============================
+   RESPONSIVE — iPHONE (max-width: 395px)
+   iPhone 16: 393px / iPhone 12: 390px / iPhone Mini: 375px
+   ============================= */
+@media (max-width: 395px) {
+    /* Header iPhone */
+    .header-inner {
+        padding: 0 12px;
+    }
+
+    .header-right .btn-secondary {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .logo {
+        height: 22px;
+    }
+
+    /* Top banner */
+    .top-banner {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    /* Hero iPhone */
+    .hero {
+        margin: 4px 4px 0;
+        padding: 16px 10px 0;
+        border-radius: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 26px;
+        line-height: 1.15;
+    }
+
+    .hero-features li {
+        font-size: 15px;
+    }
+
+    .hero-buttons .btn {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    .hero-image img {
+        width: 120%;
+        max-width: 120%;
+        left: -5%;
+    }
+
+    /* Benefits bar iPhone */
+    .benefits-bar {
+        margin: 4px 4px 0;
+        padding: 10px 2px;
+        border-radius: 12px;
+    }
+
+    .benefit-icon-img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .benefit-text {
+        font-size: 10px;
+    }
+
+    /* Product iPhone */
+    .product-description {
+        padding: 30px 10px 10px;
+    }
+
+    .product-details {
+        padding: 0 10px 30px;
+    }
+
+    .product-info h2 {
+        font-size: 22px;
+    }
+
+    .product-features li {
+        font-size: 14px;
+    }
+
+    .product-main-image {
+        height: 38vh;
+        border-radius: 12px;
+    }
+
+    .badge-arome-img {
+        width: 65px;
+    }
+
+    /* Practical iPhone */
+    .practical-section {
+        padding: 30px 10px;
+    }
+
+    .practical-inner h2 {
+        font-size: 22px;
+    }
+
+    .practical-banner {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .practical-orbit {
+        gap: 6px;
+    }
+
+    .practical-orbit-item {
+        padding: 10px 6px;
+    }
+
+    .practical-orbit-badge {
+        width: 32px;
+        height: 32px;
+        font-size: 10px;
+    }
+
+    .practical-orbit-text strong,
+    .practical-orbit-text-right strong {
+        font-size: 11px;
+    }
+
+    .practical-orbit-text span,
+    .practical-orbit-text-right span {
+        font-size: 10px;
+    }
+
+    /* Usage iPhone */
+    .usage-section {
+        padding: 30px 10px;
+    }
+
+    .usage-header h2 {
+        font-size: 22px;
+    }
+
+    .usage-icon-card {
+        padding: 10px 6px;
+    }
+
+    .usage-icon-card span {
+        font-size: 12px;
+    }
+
+    .usage-icon-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Recipes iPhone */
+    .recipe-card {
+        flex: 0 0 180px;
+    }
+
+    .recipe-card-overlay {
+        height: 270px;
+        border-radius: 12px;
+    }
+
+    .recipe-overlay-content h4 {
+        font-size: 13px;
+    }
+
+    .recipe-overlay-content p {
+        font-size: 11px;
+    }
+
+    /* Comparison iPhone */
+    .comparison-section {
+        padding: 30px 8px;
+    }
+
+    .comparison-inner h2 {
+        font-size: 20px;
+    }
+
+    .comparison-layout {
+        gap: 8px;
+    }
+
+    .comp-card-side {
+        padding: 14px;
+        gap: 10px;
+        border-radius: 12px;
+    }
+
+    .comp-card-img {
+        width: 120px;
+        height: 90px;
+    }
+
+    .comp-line {
+        font-size: 11px;
+    }
+
+    .comp-dot {
+        width: 16px;
+        height: 16px;
+        min-width: 16px;
+        font-size: 9px;
+    }
+
+    .comp-card-center {
+        padding: 14px 10px 0;
+        border-radius: 12px;
+    }
+
+    .comp-holeo-logo {
+        width: 65px;
+    }
+
+    .comp-holeo-title {
+        font-size: 18px;
+    }
+
+    .comp-bottle-wrapper {
+        width: 110px;
+        min-width: 110px;
+    }
+
+    .comp-bottle {
+        width: 110px;
+    }
+
+    /* Story iPhone */
+    .story-section {
+        padding: 30px 10px;
+    }
+
+    .story-content h2 {
+        font-size: 22px;
+    }
+
+    .story-content p {
+        font-size: 14px;
+    }
+
+    .story-companies {
+        gap: 30px;
+    }
+
+    .company-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .company-label h4 {
+        font-size: 12px;
+    }
+
+    .company-label p {
+        font-size: 10px;
+    }
+
+    /* Values iPhone */
+    .values-section {
+        padding: 30px 10px;
+    }
+
+    .values-inner h2 {
+        font-size: 20px;
+    }
+
+    .values-grid {
+        gap: 8px;
+    }
+
+    .value-card {
+        min-height: 170px;
+    }
+
+    .value-card-back h3 {
+        font-size: 13px;
+    }
+
+    .value-card-back p {
+        font-size: 10px;
+    }
+
+    /* Pro section iPhone */
+    .pro-section {
+        margin: 0 4px;
+        padding: 24px 10px;
+        border-radius: 12px;
+    }
+
+    .pro-inner h2 {
+        font-size: 20px;
+    }
+
+    .pro-desc {
+        font-size: 14px;
+    }
+
+    .pro-features li {
+        font-size: 13px;
+    }
+
+    .pro-buttons .btn {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    /* FAQ iPhone */
+    .faq-section {
+        padding: 30px 10px;
+    }
+
+    .faq-inner h2 {
+        font-size: 20px;
+    }
+
+    .accordion-header {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .accordion-content-inner {
+        padding: 0 14px 14px;
+    }
+
+    .accordion-content-inner p {
+        font-size: 13px;
+    }
+
+    /* Contact section iPhone */
+    .contact-section {
+        padding: 30px 10px;
+    }
+
+    .contact-section-text h2 {
+        font-size: 22px;
+    }
+
+    .contact-section-text p {
+        font-size: 14px;
+    }
+
+    .contact-section-form {
+        padding: 20px 12px;
+        border-radius: 14px;
+    }
+
+    .contact-section-form input,
+    .contact-section-form textarea {
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+
+    /* Bottom promo iPhone */
+    .bottom-promo {
+        padding: 30px 10px;
+    }
+
+    /* Footer CTA iPhone */
+    .footer-cta {
+        padding: 24px 10px;
+    }
+
+    .footer-cta h3 {
+        font-size: 18px;
+    }
+
+    .footer-cta p {
+        font-size: 14px;
+    }
+
+    /* Store cards iPhone */
+    .store-card-cta {
+        min-width: 170px;
+    }
+
+    /* Footer iPhone */
+    .footer-main {
+        padding: 24px 10px 0;
+    }
+
+    .footer-inner {
+        gap: 10px;
+    }
+
+    .footer-col h4 {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .footer-col li {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+
+    .footer-bottom {
+        padding: 12px 10px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+    }
+
+    /* Contact bubble iPhone */
+    .contact-bubble {
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .contact-bubble-btn {
+        height: 42px;
+        padding: 0 14px;
+    }
+
+    .contact-bubble-label {
+        font-size: 12px;
+    }
+
+    .contact-panel {
+        width: calc(100vw - 24px);
+    }
+
+    /* Cookie popup iPhone */
+    .cookie-popup {
+        padding: 10px;
+    }
+
+    .cookie-popup-content h3 {
+        font-size: 17px;
+    }
+
+    .cookie-popup-content p {
+        font-size: 13px;
+    }
+}
