@@ -337,6 +337,57 @@ if (compCard) {
 }
 
 
+// Web3Forms API key — replace with your real key from https://web3forms.com
+const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE';
+
+// Utility: send form via Web3Forms
+async function submitForm(formData, form, onSuccess) {
+    formData.append('access_key', WEB3FORMS_KEY);
+    formData.append('from_name', 'Holéo Site');
+    const submitBtn = form.querySelector('button[type="submit"], .btn');
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Envoi...'; }
+    try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        });
+        const data = await res.json();
+        if (data.success) {
+            form.reset();
+            showFormSuccess(form, 'Message envoyé !');
+            if (onSuccess) onSuccess();
+        } else {
+            showFormSuccess(form, 'Erreur, réessayez.', true);
+        }
+    } catch (err) {
+        showFormSuccess(form, 'Erreur réseau, réessayez.', true);
+    }
+    if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Envoyer'; }
+}
+
+// Utility: show success/error message after form submit
+function showFormSuccess(form, text, isError) {
+    // Remove any existing message
+    const existing = form.parentElement.querySelector('.form-success-msg');
+    if (existing) existing.remove();
+    const msg = document.createElement('div');
+    msg.className = 'form-success-msg' + (isError ? ' form-error-msg' : '');
+    msg.textContent = text || 'Message envoyé !';
+    form.parentElement.appendChild(msg);
+    setTimeout(() => msg.remove(), 3000);
+}
+
+// Contact section form
+const contactSectionForm = document.getElementById('contact-section-form');
+if (contactSectionForm) {
+    contactSectionForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const fd = new FormData(contactSectionForm);
+        fd.append('subject', fd.get('subject') || 'Contact Holéo');
+        submitForm(fd, contactSectionForm);
+    });
+}
+
 // Contact bubble
 const contactBubbleBtn = document.querySelector('.contact-bubble-btn');
 const contactPanel = document.querySelector('.contact-panel');
@@ -365,17 +416,24 @@ if (contactBubbleBtn && contactPanel) {
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const name = contactForm.name.value.trim();
-        const email = contactForm.email.value.trim();
-        const message = contactForm.message.value.trim();
-        const subject = encodeURIComponent('Question Holéo - ' + name);
-        const body = encodeURIComponent('De : ' + name + '\nEmail : ' + email + '\n\n' + message);
-        window.location.href = 'mailto:contact@holeo.fr?subject=' + subject + '&body=' + body;
-        contactPanel.classList.remove('open');
-        contactForm.reset();
+        const fd = new FormData(contactForm);
+        fd.append('subject', 'Question Holéo');
+        submitForm(fd, contactForm, () => {
+            setTimeout(() => contactPanel.classList.remove('open'), 1500);
+        });
     });
 }
 
+
+// Reveal phone number on click
+const revealPhoneBtn = document.getElementById('contact-reveal-phone');
+const phoneNumber = document.getElementById('contact-phone-number');
+if (revealPhoneBtn && phoneNumber) {
+    revealPhoneBtn.addEventListener('click', () => {
+        revealPhoneBtn.style.display = 'none';
+        phoneNumber.classList.remove('hidden');
+    });
+}
 
 // Pro popup
 const proPopup = document.getElementById('pro-popup');
@@ -398,11 +456,21 @@ if (proPopup) {
         if (e.target === proPopup) proPopup.classList.add('hidden');
     });
 
-    // Download gated by email
+    // Download gated by email — show email field on first click, download on confirm
     const proDownloadBtn = document.getElementById('pro-download-btn');
+    const proDownloadEmailRow = document.getElementById('pro-download-email-row');
     const proDownloadEmail = document.getElementById('pro-download-email');
-    if (proDownloadBtn && proDownloadEmail) {
+    const proDownloadConfirm = document.getElementById('pro-download-confirm');
+
+    if (proDownloadBtn && proDownloadEmailRow) {
         proDownloadBtn.addEventListener('click', () => {
+            proDownloadEmailRow.classList.remove('hidden');
+            proDownloadEmail.focus();
+        });
+    }
+
+    if (proDownloadConfirm && proDownloadEmail) {
+        proDownloadConfirm.addEventListener('click', () => {
             const email = proDownloadEmail.value.trim();
             if (!email || !proDownloadEmail.checkValidity()) {
                 proDownloadEmail.reportValidity();
@@ -418,15 +486,9 @@ if (proPopup) {
     if (proForm) {
         proForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const name = proForm.name.value.trim();
-            const email = proForm.email.value.trim();
-            const company = proForm.company.value.trim();
-            const message = proForm.message.value.trim();
-            const subject = encodeURIComponent('Holéo Pro - ' + company);
-            const body = encodeURIComponent('De : ' + name + '\nEmail : ' + email + '\nEntreprise : ' + company + '\n\n' + message);
-            window.location.href = 'mailto:contact@holeo.fr?subject=' + subject + '&body=' + body;
-            proPopup.classList.add('hidden');
-            proForm.reset();
+            const fd = new FormData(proForm);
+            fd.append('subject', 'Holéo Pro - Demande d\'échantillon');
+            submitForm(fd, proForm);
         });
     }
 }
