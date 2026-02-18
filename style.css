@@ -228,6 +228,11 @@ img {
     font-weight: 600;
 }
 
+/* Hidden on desktop, shown in mobile burger */
+.nav-mobile-only {
+    display: none;
+}
+
 .header-right {
     display: flex;
     align-items: center;
@@ -2561,12 +2566,17 @@ img {
         display: none;
     }
 
-    .header-right .btn-secondary,
     .header-right .lang-switcher {
         display: none;
     }
 
+    /* Mobile: show Holéo Pro, hide Où nous trouver */
     .header-right .btn-primary {
+        display: none;
+    }
+
+    .header-right .btn-secondary {
+        display: inline-flex;
         padding: 10px 16px;
         font-size: 13px;
     }
@@ -2596,6 +2606,10 @@ img {
         padding: 16px 20px;
         border-radius: 12px;
         text-align: left;
+    }
+
+    .nav.mobile-open .nav-mobile-only {
+        display: flex;
     }
 
     .nav.mobile-open .nav-link:hover,
@@ -2952,19 +2966,20 @@ img {
 
     .comp-card-side {
         max-width: 100%;
-        padding: 16px;
+        padding: 20px;
         flex-direction: row;
-        gap: 14px;
+        gap: 16px;
         align-items: center;
         border-radius: 16px;
     }
 
     .comp-card-img {
-        width: 100px;
-        height: 80px;
-        margin: 0;
+        width: 180px;
+        height: 140px;
+        margin: 0 auto;
         flex-shrink: 0;
-        border-radius: 10px;
+        border-radius: 12px;
+        object-fit: contain;
     }
 
     .comp-card-list {
@@ -2989,25 +3004,26 @@ img {
     /* Holéo center card mobile */
     .comp-card-center {
         max-width: 100%;
-        padding: 20px 16px;
+        padding: 20px 16px 0 16px;
         border-radius: 16px;
         overflow: hidden;
     }
 
     .comp-bottle-wrapper {
-        width: 80px;
-        min-width: 80px;
+        width: 130px;
+        min-width: 130px;
         margin-top: 0;
         margin-left: 0;
+        margin-right: auto;
         align-self: flex-end;
-        margin-bottom: 0;
+        margin-bottom: -4px;
         position: relative;
-        right: 0;
     }
 
     .comp-bottle {
-        width: 80px;
+        width: 130px;
         margin-bottom: 0;
+        display: block;
     }
 
     .comp-splash,
@@ -3210,6 +3226,7 @@ img {
     .contact-section-form {
         padding: 24px 16px;
         border-radius: 16px;
+        width: 100%;
     }
 
     /* Footer CTA mobile */
@@ -3237,12 +3254,23 @@ img {
     }
 
     .stores-grid-cta {
-        grid-template-columns: 1fr;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
         gap: 10px;
-        padding: 0 4px;
+        padding: 0 4px 12px;
+        scrollbar-width: none;
+    }
+
+    .stores-grid-cta::-webkit-scrollbar {
+        display: none;
     }
 
     .store-card-cta {
+        min-width: 200px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
         padding: 14px 16px;
     }
 
@@ -3265,9 +3293,13 @@ img {
     }
 
     .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
         text-align: center;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
     }
 
     .footer-brand p {
@@ -3465,13 +3497,13 @@ img {
 
     /* Comparison 480 */
     .comp-card-img {
-        width: 80px;
-        height: 60px;
+        width: 150px;
+        height: 110px;
     }
 
     .comp-card-side {
-        padding: 12px;
-        gap: 10px;
+        padding: 14px;
+        gap: 12px;
     }
 
     .comp-line {
@@ -3489,6 +3521,20 @@ img {
 
     .footer-cta h3 {
         font-size: 20px;
+    }
+
+    .footer-inner {
+        gap: 12px;
+    }
+
+    .footer-col h4 {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .footer-col li {
+        font-size: 11px;
+        margin-bottom: 8px;
     }
 
     .faq-inner h2 {
@@ -4142,13 +4188,8 @@ img {
         font-size: 14px;
     }
 
-    .pro-popup-section-title {
-        font-size: 13px;
-    }
-
-    .pro-popup-clients li {
-        font-size: 13px;
-        padding-left: 0;
+    .pro-popup-section {
+        display: none;
     }
 
     .pro-popup-badge {
