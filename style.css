@@ -4150,7 +4150,7 @@ img {
 @media (max-width: 680px) {
     .pro-popup {
         padding: 12px;
-        align-items: flex-end;
+        align-items: center;
     }
 
     .pro-popup-layout {
@@ -4176,12 +4176,14 @@ img {
     }
 
     .pro-popup-logo {
-        width: 90px;
+        width: auto;
+        height: 40px;
     }
 
     .pro-popup-hero-img {
-        max-height: 130px;
+        max-height: 160px;
         border-radius: 12px;
+        object-position: center top;
     }
 
     .pro-popup-desc {
