@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Holéo - Alternative au beurre 100% végétale & gourmande">
     <meta property="og:description" content="Huile végétale au goût beurre, 100% naturelle. 3 ingrédients, sans lactose, sans gluten. Fabriquée en France.">
-    <meta property="og:image" content="https://holeo.fr/assets/images/hero-image.png">
+    <meta property="og:image" content="https://holeo.fr/assets/images/hero-image.webp">
     <meta property="og:url" content="https://holeo.fr/">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Holéo">
@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Holéo - Alternative au beurre 100% végétale & gourmande">
     <meta name="twitter:description" content="Huile végétale au goût beurre. 3 ingrédients naturels, sans lactose, sans gluten. Fabriquée en France.">
-    <meta name="twitter:image" content="https://holeo.fr/assets/images/hero-image.png">
+    <meta name="twitter:image" content="https://holeo.fr/assets/images/hero-image.webp">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon-heart.png">
@@ -43,7 +43,7 @@
             "name": "Food Ingredients",
             "url": "https://holeo.fr"
         },
-        "image": "https://holeo.fr/assets/images/hero-image.png",
+        "image": "https://holeo.fr/assets/images/hero-image.webp",
         "category": "Huiles et matières grasses végétales",
         "countryOfOrigin": "FR",
         "material": "Huile de tournesol raffinée (France ou UE), huile de colza raffinée (France ou UE), arôme naturel (UE)"
@@ -92,21 +92,27 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://api.web3forms.com">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/hero-image.webp" as="image" type="image/webp">
+    <link rel="preload" href="style.css" as="style">
+
     <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Decorative Leaf Right (top) -->
     <div class="decorative-leaf decorative-leaf-right" aria-hidden="true">
-        <img src="assets/images/leaf.png" alt="" loading="lazy">
+        <img src="assets/images/leaf.webp" alt="" loading="lazy">
     </div>
     <!-- Decorative Leaf Left (mirror) -->
     <div class="decorative-leaf decorative-leaf-left" aria-hidden="true">
-        <img src="assets/images/leaf.png" alt="" loading="lazy">
+        <img src="assets/images/leaf.webp" alt="" loading="lazy">
     </div>
     <!-- Decorative Leaf Details Right -->
     <div class="decorative-leaf decorative-leaf-details-right" aria-hidden="true">
-        <img src="assets/images/leaf.png" alt="" loading="lazy">
+        <img src="assets/images/leaf.webp" alt="" loading="lazy">
     </div>
 
     <!-- Top Banner -->
@@ -124,7 +130,7 @@
     <header class="header">
         <div class="header-inner">
             <a href="#" class="logo" aria-label="Holéo - Accueil">
-                <img src="assets/images/logo-holeo.png" alt="Holéo" class="logo-img" width="120" height="32">
+                <img src="assets/images/logo-holeo.webp" alt="Holéo" class="logo-img" width="120" height="32">
             </a>
             <nav class="nav" aria-label="Navigation principale">
                 <a href="#produit" class="nav-link active" data-i18n="nav.product">Notre produit</a>
@@ -178,7 +184,7 @@
                     </ul>
                 </div>
                 <div class="hero-image">
-                    <img src="assets/images/hero-image.png" alt="Bouteille Holéo Beurre Gourmet, alternative végétale au beurre" width="1000" height="1000">
+                    <img src="assets/images/hero-image.webp" alt="Bouteille Holéo Beurre Gourmet, alternative végétale au beurre" width="1000" height="1000" fetchpriority="high">
                 </div>
             </div>
         </section>
@@ -186,15 +192,15 @@
         <!-- Benefits Bar -->
         <section class="benefits-bar fade-in-section" aria-label="Avantages clés">
             <div class="benefit">
-                <img src="assets/images/icon-sunflower.png" alt="" class="benefit-icon-img" width="42" height="42" loading="lazy">
+                <img src="assets/images/icon-sunflower.webp" alt="" class="benefit-icon-img" width="42" height="42" loading="lazy">
                 <span class="benefit-text" data-i18n="benefits.natural">100% <strong>naturel</strong><br class="mobile-br"> et <strong>végétal</strong></span>
             </div>
             <div class="benefit">
-                <img src="assets/images/icon-wheat.png" alt="" class="benefit-icon-img" width="42" height="42" loading="lazy">
+                <img src="assets/images/icon-wheat.webp" alt="" class="benefit-icon-img" width="42" height="42" loading="lazy">
                 <span class="benefit-text" data-i18n="benefits.ingredients">Seulement<br class="mobile-br"> <strong>3 ingrédients</strong></span>
             </div>
             <div class="benefit">
-                <img src="assets/images/icon-france-flag.png" alt="" class="benefit-icon-img" width="42" height="42" loading="lazy">
+                <img src="assets/images/icon-france-flag.webp" alt="" class="benefit-icon-img" width="42" height="42" loading="lazy">
                 <span class="benefit-text" data-i18n="benefits.france">Fabriqué<br class="mobile-br"> en <strong>France</strong></span>
             </div>
         </section>
@@ -203,9 +209,9 @@
         <section class="product-description fade-in-section" aria-label="Description du produit">
             <div class="product-desc-inner">
                 <div class="product-image-wrapper">
-                    <img src="assets/images/oil-splash.png" alt="" class="oil-splash-decoration" aria-hidden="true" loading="lazy">
-                    <img src="assets/images/product-woman.png" alt="Femme tenant une bouteille Holéo en cuisine" class="product-main-image" loading="lazy">
-                    <img src="assets/images/MACARON.png" alt="Arôme naturel, sans beurre" class="badge-arome-img" loading="lazy">
+                    <img src="assets/images/oil-splash.webp" alt="" class="oil-splash-decoration" aria-hidden="true" loading="lazy">
+                    <img src="assets/images/product-woman.webp" alt="Femme tenant une bouteille Holéo en cuisine" class="product-main-image" loading="lazy">
+                    <img src="assets/images/MACARON.webp" alt="Arôme naturel, sans beurre" class="badge-arome-img" loading="lazy">
                 </div>
                 <div class="product-info">
                     <h2 data-i18n="product.title">L'huile qui ne compte <br><span class="underline"><strong>pas pour du beurre</strong></span></h2>
@@ -358,7 +364,7 @@
                         <div class="practical-orbit-ring"></div>
                         <canvas id="bottle-canvas" width="500" height="700" class="practical-bottle" aria-label="Bouteille Holéo en rotation"></canvas>
                         <!-- Fallback si les frames ne sont pas chargées -->
-                        <img src="assets/images/bouteille-entiere.png" alt="Bouteille Holéo" class="practical-bottle practical-bottle-fallback" loading="lazy">
+                        <img src="assets/images/bouteille-entiere.webp" alt="Bouteille Holéo" class="practical-bottle practical-bottle-fallback" loading="lazy">
                     </div>
                     <!-- Right arguments -->
                     <div class="practical-orbit-col practical-orbit-right">
@@ -403,19 +409,19 @@
                     <h2 data-i18n="usage.title">Et qui s'utilise<br><span class="underline"><strong>partout !</strong></span></h2>
                     <div class="usage-icons-row">
                         <div class="usage-icon-card">
-                            <img src="assets/images/icon-usage-salad.png" alt="Assaisonner" class="usage-icon-img" width="80" height="80" loading="lazy">
+                            <img src="assets/images/icon-usage-salad.webp" alt="Assaisonner" class="usage-icon-img" width="80" height="80" loading="lazy">
                             <span data-i18n="usage.salad">Assaisonnez<br>et enrobez</span>
                         </div>
                         <div class="usage-icon-card">
-                            <img src="assets/images/icon-usage-pan.png" alt="Poêler" class="usage-icon-img" width="80" height="80" loading="lazy">
+                            <img src="assets/images/icon-usage-pan.webp" alt="Poêler" class="usage-icon-img" width="80" height="80" loading="lazy">
                             <span data-i18n="usage.pan">Poêlez<br>et rissolez</span>
                         </div>
                         <div class="usage-icon-card">
-                            <img src="assets/images/icon-usage-cupcake.png" alt="Pâtisser" class="usage-icon-img" width="80" height="80" loading="lazy">
+                            <img src="assets/images/icon-usage-cupcake.webp" alt="Pâtisser" class="usage-icon-img" width="80" height="80" loading="lazy">
                             <span data-i18n="usage.cupcake">Cuisinez<br>et pâtissez</span>
                         </div>
                         <div class="usage-icon-card">
-                            <img src="assets/images/icon-usage-airfryer.png" alt="Airfryer" class="usage-icon-img" width="80" height="80" loading="lazy">
+                            <img src="assets/images/icon-usage-airfryer.webp" alt="Airfryer" class="usage-icon-img" width="80" height="80" loading="lazy">
                             <span data-i18n="usage.airfryer">Idéal pour<br>votre Airfryer</span>
                         </div>
                     </div>
@@ -428,112 +434,112 @@
                     <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
                 <div class="recipe-grid">
-                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-haricots.png');">
+                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-haricots.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge">Salé</span>
                             <h4>Haricots verts persillade</h4>
                             <p>Cuire les haricots à la vapeur, puis ajouter un filet d'Holéo avec ail et persil frais.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-roux.png');">
+                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-roux.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge">Salé</span>
                             <h4>Roux</h4>
                             <p>Chauffer Holéo à feu doux, incorporer la farine en remuant jusqu'à obtenir un roux doré.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-brioches.png');">
+                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-brioches.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge recipe-badge-sweet">Sucré</span>
                             <h4>Brioches</h4>
                             <p>Remplacer le beurre par Holéo dans votre pâte à brioche pour des brioches moelleuses.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-boulettes.png');">
+                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-boulettes.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge">Salé</span>
                             <h4>Boulettes</h4>
                             <p>Dorer vos boulettes dans Holéo pour une cuisson homogène et un goût beurré irrésistible.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-pates.jpg');">
+                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-pates.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge">Salé</span>
                             <h4>Pâtes au beurre</h4>
                             <p>Ajouter un filet d'Holéo sur vos pâtes chaudes pour un goût beurre fondant.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-puree.jpg');">
+                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-puree.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge">Salé</span>
                             <h4>Purée</h4>
                             <p>Incorporer Holéo à votre purée de pommes de terre pour un résultat onctueux.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-semoule.jpg');">
+                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-semoule.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge">Salé</span>
                             <h4>Semoule</h4>
                             <p>Ajouter Holéo à la semoule en fin de cuisson pour un goût beurré et léger.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-riz.jpg');">
+                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-riz.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge">Salé</span>
                             <h4>Riz pilaf</h4>
                             <p>Faire revenir le riz dans Holéo avant d'ajouter le bouillon pour un pilaf parfumé.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-mayonnaise.jpg');">
+                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-mayonnaise.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge">Salé</span>
                             <h4>Mayonnaise</h4>
                             <p>Remplacer l'huile classique par Holéo pour une mayo au goût beurre unique.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-hollandaise.jpg');">
+                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-hollandaise.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge">Salé</span>
                             <h4>Sauce hollandaise</h4>
                             <p>Préparer une hollandaise végétale onctueuse en remplaçant le beurre par Holéo.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-cake-sale.jpg');">
+                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-cake-sale.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge">Salé</span>
                             <h4>Cake salé</h4>
                             <p>Utiliser Holéo à la place du beurre fondu pour un cake moelleux aux légumes.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-legumes-rotis.jpg');">
+                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-legumes-rotis.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge">Salé</span>
                             <h4>Légumes rôtis</h4>
                             <p>Enrober vos légumes d'Holéo avant de les enfourner pour un rôtissage parfait.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-pain-brioche.jpg');">
+                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-pain-brioche.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge recipe-badge-sweet">Sucré</span>
                             <h4>Pain brioché</h4>
                             <p>Un pain brioché moelleux et doré grâce à Holéo, avec moins de matière grasse.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-madeleines.jpg');">
+                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-madeleines.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge recipe-badge-sweet">Sucré</span>
                             <h4>Madeleines</h4>
                             <p>Des madeleines fondantes au goût beurre en remplaçant simplement par Holéo.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-cake-marbre.jpg');">
+                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-cake-marbre.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge recipe-badge-sweet">Sucré</span>
                             <h4>Cake marbré</h4>
                             <p>Un marbré chocolat-vanille ultra moelleux avec Holéo et 40% de matière en moins.</p>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-crepes.jpg');">
+                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-crepes.webp');">
                         <div class="recipe-overlay-content">
                             <span class="recipe-badge recipe-badge-sweet">Sucré</span>
                             <h4>Crêpes</h4>
@@ -548,14 +554,14 @@
         <!-- Comparison Section -->
         <section class="comparison-section fade-in-section" aria-label="Comparaison beurre, margarine et Holéo">
             <div class="comp-leaf-parallax" aria-hidden="true">
-                <img src="assets/images/leaf.png" alt="" loading="lazy">
+                <img src="assets/images/leaf.webp" alt="" loading="lazy">
             </div>
             <div class="comparison-inner">
                 <h2 data-i18n="comp.title">Ce n'est ni du beurre.<br>Ni de la margarine. <span class="underline"><strong>C'est Holéo</strong></span></h2>
                 <div class="comparison-layout">
                     <!-- Margarine (left) -->
                     <div class="comp-card comp-card-side">
-                        <img src="assets/images/comparison-margarine.png" alt="Margarine" class="comp-card-img" loading="lazy">
+                        <img src="assets/images/comparison-margarine.webp" alt="Margarine" class="comp-card-img" loading="lazy">
                         <div class="comp-card-list">
                             <h3 class="comp-side-title" data-i18n="comp.margarine">Margarine</h3>
                             <p class="comp-line"><span class="comp-dot green"></span><span>Origine <strong>végétale</strong></span></p>
@@ -569,14 +575,14 @@
                     <div class="comp-card comp-card-center">
                         <div class="comp-center-content">
                             <div class="comp-bottle-wrapper">
-                                <img src="assets/images/oil-splash-comparison.png" alt="" class="comp-splash" aria-hidden="true" loading="lazy">
-                                <img src="assets/images/butter-curl.png" alt="" class="comp-butter-curl" aria-hidden="true" loading="lazy">
-                                <img src="assets/images/leaf-horizontal.png" alt="" class="comp-leaf-right" aria-hidden="true" loading="lazy">
-                                <img src="assets/images/leaf-horizontal.png" alt="" class="comp-leaf-right-2" aria-hidden="true" loading="lazy">
-                                <img src="assets/images/bottle-holeo.png" alt="Bouteille Holéo" class="comp-bottle" loading="lazy">
+                                <img src="assets/images/oil-splash-comparison.webp" alt="" class="comp-splash" aria-hidden="true" loading="lazy">
+                                <img src="assets/images/butter-curl.webp" alt="" class="comp-butter-curl" aria-hidden="true" loading="lazy">
+                                <img src="assets/images/leaf-horizontal.webp" alt="" class="comp-leaf-right" aria-hidden="true" loading="lazy">
+                                <img src="assets/images/leaf-horizontal.webp" alt="" class="comp-leaf-right-2" aria-hidden="true" loading="lazy">
+                                <img src="assets/images/bottle-holeo.webp" alt="Bouteille Holéo" class="comp-bottle" loading="lazy">
                             </div>
                             <div class="comp-center-text">
-                                <img src="assets/images/Holeopng.png" alt="Holéo" class="comp-holeo-logo">
+                                <img src="assets/images/Holeopng.webp" alt="Holéo" class="comp-holeo-logo">
                                 <p class="comp-line"><span class="comp-dot green"></span><span>Origine <strong>végétale</strong></span></p>
                                 <p class="comp-line"><span class="comp-dot green"></span><span><strong>Bon cholestérol</strong></span></p>
                                 <p class="comp-line"><span class="comp-dot green"></span><span><strong>Goût beurre</strong></span></p>
@@ -588,7 +594,7 @@
                     </div>
                     <!-- Beurre (right) -->
                     <div class="comp-card comp-card-side">
-                        <img src="assets/images/comparison-beurre.png" alt="Beurre traditionnel" class="comp-card-img" loading="lazy">
+                        <img src="assets/images/comparison-beurre.webp" alt="Beurre traditionnel" class="comp-card-img" loading="lazy">
                         <div class="comp-card-list">
                             <h3 class="comp-side-title" data-i18n="comp.beurre">Beurre</h3>
                             <p class="comp-line"><span class="comp-dot red"></span><span>Origine <strong>animale</strong></span></p>
@@ -605,7 +611,7 @@
         <!-- Company Story Section -->
         <section class="story-section fade-in-section" id="entreprise">
             <div class="story-leaf-parallax" aria-hidden="true">
-                <img src="assets/images/leaf.png" alt="" loading="lazy">
+                <img src="assets/images/leaf.webp" alt="" loading="lazy">
             </div>
             <div class="story-inner">
                 <div class="story-content">
@@ -615,17 +621,17 @@
                 </div>
                 <div class="story-companies">
                     <div class="company-circle">
-                        <img src="assets/images/company-food-ingredients.jpg" alt="Équipe Food Ingredients" class="company-circle-img" loading="lazy">
+                        <img src="assets/images/company-food-ingredients.webp" alt="Équipe Food Ingredients" class="company-circle-img" loading="lazy">
                         <div class="company-label company-label-bottom">
                             <h4>Food Ingredients</h4>
                             <p data-i18n="story.fi_desc">Spécialiste des huiles aromatisées depuis 1994</p>
                         </div>
                     </div>
                     <a href="https://huilerie-lapalisse.fr/" target="_blank" rel="noopener noreferrer" class="company-circle">
-                        <img src="assets/images/company-huilerie.png" alt="Huilerie de Lapalisse" class="company-circle-img" loading="lazy">
+                        <img src="assets/images/company-huilerie.webp" alt="Huilerie de Lapalisse" class="company-circle-img" loading="lazy">
                         <div class="company-label company-label-top">
                             <div class="company-label-with-logo">
-                                <img src="assets/images/Logo HLP.png" alt="Logo HLP" class="company-label-logo" width="36" height="36">
+                                <img src="assets/images/Logo HLP.webp" alt="Logo HLP" class="company-label-logo" width="36" height="36">
                                 <div>
                                     <h4 data-i18n="story.huilerie_name">L'huilerie de Lapalisse</h4>
                                     <p data-i18n="story.huilerie_desc">Entreprise familiale depuis 1898</p>
@@ -645,7 +651,7 @@
                     <div class="value-card stagger-child">
                         <div class="value-card-inner">
                             <div class="value-card-front">
-                                <img src="assets/images/value-climat.png" alt="Pour le climat et la biodiversité" loading="lazy">
+                                <img src="assets/images/value-climat.webp" alt="Pour le climat et la biodiversité" loading="lazy">
                             </div>
                             <div class="value-card-back">
                                 <div class="value-card-back-icon">🌍</div>
@@ -657,7 +663,7 @@
                     <div class="value-card stagger-child">
                         <div class="value-card-inner">
                             <div class="value-card-front">
-                                <img src="assets/images/value-manger.png" alt="Pour le mieux manger" loading="lazy">
+                                <img src="assets/images/value-manger.webp" alt="Pour le mieux manger" loading="lazy">
                             </div>
                             <div class="value-card-back">
                                 <div class="value-card-back-icon">🥗</div>
@@ -669,7 +675,7 @@
                     <div class="value-card stagger-child">
                         <div class="value-card-inner">
                             <div class="value-card-front">
-                                <img src="assets/images/value-filieres.png" alt="Pour les filières locales et durables" loading="lazy">
+                                <img src="assets/images/value-filieres.webp" alt="Pour les filières locales et durables" loading="lazy">
                             </div>
                             <div class="value-card-back">
                                 <div class="value-card-back-icon">🚜</div>
@@ -681,7 +687,7 @@
                     <div class="value-card stagger-child">
                         <div class="value-card-inner">
                             <div class="value-card-front">
-                                <img src="assets/images/value-animaux.png" alt="Pour les animaux" loading="lazy">
+                                <img src="assets/images/value-animaux.webp" alt="Pour les animaux" loading="lazy">
                             </div>
                             <div class="value-card-back">
                                 <div class="value-card-back-icon">🐄</div>
@@ -697,11 +703,11 @@
         <!-- Professional Section -->
         <section class="pro-section fade-in-section" aria-label="Offre professionnelle">
             <div class="pro-leaf-parallax" aria-hidden="true">
-                <img src="assets/images/leaf.png" alt="" loading="lazy">
+                <img src="assets/images/leaf.webp" alt="" loading="lazy">
             </div>
             <div class="pro-inner">
                 <div class="pro-image">
-                    <img src="assets/images/holeo-pro.png" alt="Holéo format professionnel bidon 10L" loading="lazy">
+                    <img src="assets/images/holeo-pro.webp" alt="Holéo format professionnel bidon 10L" loading="lazy">
                 </div>
                 <div class="pro-content">
                     <h2 data-i18n="pro.title">Vous êtes un<br><span class="underline"><strong>professionnel ?</strong></span></h2>
@@ -887,7 +893,7 @@
         <div class="footer-main">
             <div class="footer-inner">
                 <div class="footer-col footer-brand">
-                    <img src="assets/images/logo-holeo.png" alt="Holéo" class="footer-logo" width="120" height="28" loading="lazy">
+                    <img src="assets/images/logo-holeo.webp" alt="Holéo" class="footer-logo" width="120" height="28" loading="lazy">
                     <p data-i18n="footer.brand_desc">Huile végétale au goût beurre, 100% naturelle. Fabriquée en France par deux entreprises familiales.</p>
                     <div class="footer-socials">
                         <a href="https://instagram.com/holeo_france" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
@@ -967,10 +973,10 @@
             </button>
             <div class="pro-popup-header">
                 <div class="pro-popup-title-row">
-                    <img src="assets/images/Holeopng.png" alt="Holéo" class="pro-popup-logo" width="120">
+                    <img src="assets/images/Holeopng.webp" alt="Holéo" class="pro-popup-logo" width="120">
                     <span class="pro-popup-pro-label">Pro</span>
                 </div>
-                <img src="assets/images/Holeopro.png" alt="Holéo format professionnel" class="pro-popup-hero-img">
+                <img src="assets/images/Holeopro.webp" alt="Holéo format professionnel" class="pro-popup-hero-img">
             </div>
             <div class="pro-popup-layout">
                 <div class="pro-popup-left">
@@ -1016,7 +1022,7 @@
             <div class="cookie-crumb cookie-crumb-1"></div>
             <div class="cookie-crumb cookie-crumb-2"></div>
             <div class="cookie-crumb cookie-crumb-3"></div>
-            <img src="assets/images/Cookie.jpg" alt="Cookies" class="cookie-recipe-img">
+            <img src="assets/images/Cookie.webp" alt="Cookies" class="cookie-recipe-img">
             <div class="cookie-content">
                 <p class="cookie-heading">🍪 Ce site utilise des cookies</p>
                 <p class="cookie-desc">Nous utilisons des cookies essentiels pour le bon fonctionnement du site, ainsi que des cookies analytiques pour comprendre comment vous interagissez avec celui-ci. Aucune donnée personnelle n'est partagée avec des tiers.</p>
@@ -1033,7 +1039,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
-    <script src="i18n.js"></script>
+    <script src="script.js" defer></script>
+    <script src="i18n.js" defer></script>
 </body>
 </html>

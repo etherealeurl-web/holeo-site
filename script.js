@@ -152,7 +152,7 @@ if (underlines.length) {
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
         const img = new Image();
         const basePath = (window.location.pathname.match(/^\/(en|ko)\//) ? '../' : '');
-        img.src = `${basePath}assets/images/bottle-frames/${String(i).padStart(4, '0')}.png`;
+        img.src = `${basePath}assets/images/bottle-frames/${String(i).padStart(4, '0')}.webp`;
         img.onload = function () {
             loaded++;
             if (loaded === TOTAL_FRAMES) {
