@@ -77,7 +77,7 @@ Clients professionnels : hôpitaux, restauration collective, traiteurs, food ser
 | Gluten | Sans | Sans | Variable |
 | Huile de palme | Sans | Sans | Souvent présente |
 | Conservation | 12 mois, température ambiante | 2-3 mois, réfrigéré | 6 mois, réfrigéré |
-| Cuisson haute température | Oui, ne brûle pas | Non, brûle à 130°C | Variable |
+| Cuisson haute température | Jusqu'à 170°C sans brûler | Non, brûle à 130°C | Variable |
 | Cholestérol | 0 mg | ~215 mg/100g | Variable |
 | Oméga-3 / Oméga-6 | Source naturelle | Traces | Variable |
 | Convient aux végans | Oui | Non | Variable |
@@ -144,15 +144,15 @@ Produire 1 kg de beurre émet ~12 kg CO₂eq, consomme ~5 500 L d'eau et ~15 m²
 → [Lire l'article complet](https://holeo.fr/articles/impact-ecologique-beurre-huiles-vegetales.html)
 
 ### Cuisine végétale : le goût sans compromis
-Le mythe du « végétal fade » vient des anciennes margarines industrielles (10+ ingrédients). Holéo, avec 3 ingrédients et un arôme naturel développé par Food Ingredients depuis 1994, offre un vrai goût beurré. Avantages en cuisine : supporte les hautes températures (vs beurre qui brûle à 130°C), 40% de matière en moins en pâtisserie, liquide et prête à l'emploi.
+Le mythe du « végétal fade » vient des anciennes margarines industrielles (10+ ingrédients). Holéo, avec 3 ingrédients et un arôme naturel développé par Food Ingredients depuis 1994, offre un vrai goût beurré. Avantages en cuisine : supporte jusqu'à 170°C (vs beurre qui brûle à 130°C), 40% de matière en moins, liquide et prête à l'emploi.
 → [Lire l'article complet](https://holeo.fr/articles/cuisine-vegetale-gout-sans-compromis.html)
 
 ### Airfryer + Holéo : le combo parfait
-Le beurre est incompatible avec l'Airfryer (brûle à 130°C, l'Airfryer cuit à 160-200°C). Holéo est idéale : résiste à la chaleur, format liquide facile à doser, goût beurré. Dosages : 1 c.à.s. pour frites/légumes, 2 c.à.s. pour poulet. Astuces : badigeonner au pinceau, secouer à mi-cuisson, finition beurré à la sortie.
+Le beurre est incompatible avec l'Airfryer (brûle à 130°C). Holéo supporte jusqu'à 170°C, couvrant la majorité des usages Airfryer. Format liquide facile à doser, goût beurré. Dosages : 1 c.à.s. pour frites/légumes (170°C), 2 c.à.s. pour poulet (170°C). Astuces : badigeonner au pinceau, secouer à mi-cuisson, finition beurré à la sortie.
 → [Lire l'article complet](https://holeo.fr/articles/airfryer-holeo-combo-parfait.html)
 
 ### Beurre, margarine ou huile végétale : que choisir ?
-Comparatif complet. Beurre : 1-2 ingrédients, 51 g saturés, 215 mg cholestérol, brûle à 130°C, 2-3 mois au frigo. Margarine : 10+ ingrédients, 15-25 g saturés, souvent huile de palme, 6 mois au frigo. Holéo : 3 ingrédients, 8,4 g saturés, 0 cholestérol, haute température, 12 mois température ambiante. Sans lactose, sans gluten, végan, sans huile de palme.
+Comparatif complet. Beurre : 1-2 ingrédients, 51 g saturés, 215 mg cholestérol, brûle à 130°C, 2-3 mois au frigo. Margarine : 10+ ingrédients, 15-25 g saturés, souvent huile de palme, 6 mois au frigo. Holéo : 3 ingrédients, 8,4 g saturés, 0 cholestérol, jusqu'à 170°C, 12 mois température ambiante. Sans lactose, sans gluten, végan, sans huile de palme.
 → [Lire l'article complet](https://holeo.fr/articles/beurre-margarine-huile-vegetale-comparatif.html)
 
 ## Contact
