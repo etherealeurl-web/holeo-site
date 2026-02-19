@@ -1,3 +1,15 @@
+// On mobile: close product-details accordion by default to save space
+if (window.innerWidth <= 768) {
+    const detailsAccordion = document.querySelector('.product-details .accordion');
+    if (detailsAccordion) {
+        detailsAccordion.querySelectorAll('.accordion-item.active').forEach(item => {
+            item.classList.remove('active');
+            const header = item.querySelector('.accordion-header');
+            if (header) header.setAttribute('aria-expanded', 'false');
+        });
+    }
+}
+
 // Scroll-triggered fade-in sections
 const fadeInSections = document.querySelectorAll('.fade-in-section');
 if (fadeInSections.length) {
@@ -432,6 +444,16 @@ if (revealPhoneBtn && phoneNumber) {
     revealPhoneBtn.addEventListener('click', () => {
         revealPhoneBtn.style.display = 'none';
         phoneNumber.classList.remove('hidden');
+    });
+}
+
+// Pro popup phone reveal (mobile)
+const proPhoneBtn = document.getElementById('pro-popup-phone-btn');
+const proPhoneNumber = document.getElementById('pro-popup-phone-number');
+if (proPhoneBtn && proPhoneNumber) {
+    proPhoneBtn.addEventListener('click', () => {
+        proPhoneBtn.style.display = 'none';
+        proPhoneNumber.classList.remove('hidden');
     });
 }
 

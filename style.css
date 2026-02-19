@@ -4316,6 +4316,11 @@ img {
     white-space: nowrap;
 }
 
+/* Pro popup mobile contact — hidden on desktop */
+.pro-popup-mobile-contact {
+    display: none;
+}
+
 .pro-popup-form-title {
     font-size: 18px;
     font-weight: 700;
@@ -4365,10 +4370,75 @@ img {
     }
 
     .pro-popup-right {
-        border-left: none;
-        padding-left: 0;
+        display: none;
+    }
+
+    .pro-popup-mobile-contact {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 16px;
+        padding-top: 16px;
         border-top: 1px solid #e8e4da;
-        padding-top: 20px;
+    }
+
+    .pro-popup-mobile-sample {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .pro-popup-mobile-info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .pro-popup-mobile-email {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #3B7D23;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .pro-popup-mobile-phone-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: none;
+        border: 1px dashed #3B7D23;
+        color: #3B7D23;
+        font-family: 'Raleway', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        padding: 6px 16px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    .pro-popup-mobile-phone-btn:hover {
+        background: #3B7D23;
+        color: #fff;
+    }
+
+    .pro-popup-mobile-phone-number {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #3B7D23;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .pro-popup-mobile-phone-number.hidden {
+        display: none;
     }
 
     .pro-popup-inner {
