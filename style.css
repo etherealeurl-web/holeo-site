@@ -4029,11 +4029,11 @@ img {
 
     .cookie-popup {
         padding: 10px;
-        align-items: flex-end;
+        align-items: center;
     }
 
     .cookie-recipe-img {
-        height: 90px;
+        height: 130px;
     }
 
     .cookie-recipe {
@@ -4889,7 +4889,7 @@ img {
     }
 
     .cookie-recipe-img {
-        height: 70px;
+        height: 110px;
     }
 
     .cookie-heading {
