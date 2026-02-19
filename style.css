@@ -694,6 +694,11 @@ img {
     font-weight: bold;
 }
 
+/* Line breaks visible only on mobile */
+.mobile-br {
+    display: none;
+}
+
 /* =============================
    PRODUCT DETAILS / ACCORDION
    ============================= */
@@ -2922,6 +2927,10 @@ img {
         font-size: 15px;
         text-align: center;
         padding-left: 0;
+    }
+
+    .mobile-br {
+        display: inline;
     }
 
     .product-features li::before {
