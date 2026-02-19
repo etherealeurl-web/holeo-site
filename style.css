@@ -3376,20 +3376,40 @@ img {
     }
 
     .articles-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 12px;
+        padding-bottom: 8px;
+    }
+
+    .articles-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .article-card {
+        flex: 0 0 260px;
+        scroll-snap-align: start;
     }
 
     .article-card-img {
-        height: 180px;
+        height: 160px;
     }
 
     .article-card-content {
-        padding: 18px;
+        padding: 16px;
     }
 
     .article-card-content h3 {
-        font-size: 16px;
+        font-size: 15px;
+    }
+
+    .article-card-content p {
+        font-size: 13px;
+        margin-bottom: 10px;
     }
 
     /* FAQ mobile */
@@ -4903,20 +4923,24 @@ img {
         font-size: 20px;
     }
 
+    .article-card {
+        flex: 0 0 230px;
+    }
+
     .article-card-img {
-        height: 160px;
+        height: 140px;
     }
 
     .article-card-content {
-        padding: 16px;
+        padding: 14px;
     }
 
     .article-card-content h3 {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .article-card-content p {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     /* FAQ iPhone */
