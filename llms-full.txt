@@ -38,7 +38,7 @@ Peut contenir des traces de fruits à coque et de graines de sésame. Sans lacto
 
 Holéo s'utilise partout où vous utiliseriez du beurre :
 - **Cuisson** : poêlage, sautés, sauces. Ne brûle pas comme le beurre.
-- **Pâtisserie** : brioches, gâteaux, crêpes, cookies. Utilisez 40% de matière en moins par rapport au beurre.
+- **Pâtisserie** : brioches, gâteaux, crêpes, cookies.
 - **Rôtissage** : poulet, légumes, gratins.
 - **Assaisonnement** : pâtes, riz, légumes, tartines.
 - **Airfryer** : fonctionne parfaitement.
@@ -81,7 +81,7 @@ Clients professionnels : hôpitaux, restauration collective, traiteurs, food ser
 | Cholestérol | 0 mg | ~215 mg/100g | Variable |
 | Oméga-3 / Oméga-6 | Source naturelle | Traces | Variable |
 | Convient aux végans | Oui | Non | Variable |
-| Matière en pâtisserie | 40% de moins que le beurre | Référence | Similar au beurre |
+| Matière nécessaire | 40% de moins que le beurre | Référence | Similar au beurre |
 
 ## Recettes populaires
 
@@ -122,7 +122,7 @@ R: Holéo est une huile végétale au goût beurre, composée de seulement 3 ing
 R: Huile de tournesol raffinée, huile de colza raffinée et arôme naturel. Sans sel, sans lactose, sans gluten, sans huile de palme et sans conservateurs.
 
 **Q: Comment utiliser Holéo en cuisine ?**
-R: Holéo s'utilise partout : cuisson, poêlage, rôtissage, pâtisserie, assaisonnement et Airfryer. En pâtisserie, utilisez jusqu'à 40% de matière en moins.
+R: Holéo s'utilise partout : cuisson, poêlage, rôtissage, pâtisserie, assaisonnement et Airfryer. Utilisez jusqu'à 40% de matière en moins par rapport au beurre.
 
 **Q: Comment conserver Holéo ?**
 R: 12 mois fermée et 3 mois après ouverture, à température ambiante. Aucune réfrigération nécessaire.
