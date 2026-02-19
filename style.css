@@ -1900,6 +1900,8 @@ img {
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
     border: 1px solid rgba(0, 0, 0, 0.04);
     transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s;
+    position: relative;
+    cursor: pointer;
 }
 
 .article-card:hover {
@@ -1972,6 +1974,13 @@ img {
     font-weight: 700;
     color: #3B7D23;
     transition: color 0.2s;
+}
+
+.article-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
 }
 
 .article-link:hover {
