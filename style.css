@@ -5096,16 +5096,9 @@ img {
     justify-content: space-between;
 }
 
-.article-back-link {
-    font-size: 14px;
-    font-weight: 600;
-    color: #3B7D23;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.article-back-link:hover {
-    color: #2d6119;
+.article-back-btn {
+    font-size: 13px;
+    padding: 10px 20px;
 }
 
 .article-page {
