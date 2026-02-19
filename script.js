@@ -554,6 +554,8 @@ if (cookiePopup) {
     const searchInput = document.getElementById('articles-search');
     const noResult = document.getElementById('articles-no-result');
     const filterBtns = document.querySelectorAll('.articles-filter-btn');
+    const showMoreBtn = document.getElementById('articles-show-more');
+    const showMoreWrapper = document.getElementById('articles-show-more-wrapper');
 
     if (grid && searchInput && filterBtns.length) {
         const cards = Array.from(grid.querySelectorAll('.article-card'));
@@ -602,6 +604,21 @@ if (cookiePopup) {
             if (noResult) {
                 noResult.hidden = visibleCount > 0;
             }
+
+            // Show more button: hide when filtering, show when "all" + collapsed
+            if (showMoreWrapper) {
+                if (isFiltering) {
+                    showMoreWrapper.style.display = 'none';
+                    grid.classList.add('articles-expanded');
+                } else {
+                    showMoreWrapper.style.display = '';
+                    // Reset to collapsed when back to "all" with no search
+                    grid.classList.remove('articles-expanded');
+                    if (showMoreBtn) {
+                        showMoreBtn.textContent = 'Voir plus d\'articles';
+                    }
+                }
+            }
         }
 
         // Filter buttons
@@ -631,5 +648,13 @@ if (cookiePopup) {
                 searchInput.blur();
             }
         });
+
+        // Show more / show less toggle
+        if (showMoreBtn) {
+            showMoreBtn.addEventListener('click', () => {
+                const expanded = grid.classList.toggle('articles-expanded');
+                showMoreBtn.textContent = expanded ? 'Voir moins' : 'Voir plus d\'articles';
+            });
+        }
     }
 }

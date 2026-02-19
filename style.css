@@ -1978,6 +1978,37 @@ img {
     display: none;
 }
 
+/* Show only first 3 cards by default */
+.articles-grid:not(.articles-expanded) .article-card:nth-child(n+4) {
+    display: none;
+}
+
+/* Show more button */
+.articles-show-more-wrapper {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.articles-show-more-btn {
+    font-size: 14px;
+    padding: 12px 32px;
+    border-radius: 100px;
+    border: 2px solid #3B7D23;
+    background: transparent;
+    color: #3B7D23;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    font-family: 'Raleway', sans-serif;
+}
+
+.articles-show-more-btn:hover {
+    background: #3B7D23;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 125, 35, 0.25);
+}
+
 .articles-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
