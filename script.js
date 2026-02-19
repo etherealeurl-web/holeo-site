@@ -275,36 +275,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile menu
+// Mobile menu overlay
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const mobileNav = document.getElementById('mobile-nav');
-const mobileNavClose = document.getElementById('mobile-nav-close');
+const mobileOverlay = document.getElementById('mobile-menu-overlay');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
 
 function openMobileMenu() {
-    if (!mobileNav) return;
-    mobileNav.classList.add('mobile-open');
+    if (!mobileOverlay) return;
+    mobileOverlay.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
-    mobileMenuBtn?.setAttribute('aria-expanded', 'true');
 }
 
 function closeMobileMenu() {
-    if (!mobileNav) return;
-    mobileNav.classList.remove('mobile-open');
+    if (!mobileOverlay) return;
+    mobileOverlay.classList.add('hidden');
     document.body.style.overflow = '';
-    mobileMenuBtn?.setAttribute('aria-expanded', 'false');
 }
 
 if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', openMobileMenu);
 }
 
-if (mobileNavClose) {
-    mobileNavClose.addEventListener('click', closeMobileMenu);
+if (mobileMenuClose) {
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
 }
 
-// Close menu when clicking a nav link
-if (mobileNav) {
-    mobileNav.querySelectorAll('.nav-link').forEach(link => {
+// Close menu when clicking a link
+if (mobileOverlay) {
+    mobileOverlay.querySelectorAll('.mobile-menu-link').forEach(link => {
         link.addEventListener('click', closeMobileMenu);
     });
 }

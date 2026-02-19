@@ -264,17 +264,11 @@
             <a href="#" class="logo" aria-label="Holéo - Accueil">
                 <img src="assets/images/logo-holeo.webp" alt="Holéo" class="logo-img" width="120" height="32">
             </a>
-            <nav class="nav" id="mobile-nav" aria-label="Navigation principale">
-                <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Fermer le menu">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-                    </svg>
-                </button>
+            <nav class="nav" aria-label="Navigation principale">
                 <a href="#produit" class="nav-link active" data-i18n="nav.product">Notre produit</a>
                 <a href="#recettes" class="nav-link" data-i18n="nav.recipes">Nos recettes</a>
                 <a href="#entreprise" class="nav-link" data-i18n="nav.company">Entreprise familiale</a>
                 <a href="#articles" class="nav-link" data-i18n="nav.articles">Articles</a>
-                <a href="#points-de-vente" class="nav-link nav-mobile-only" data-i18n="nav.find">Où nous trouver ?</a>
             </nav>
             <div class="header-right">
                 <div class="lang-switcher">
@@ -307,6 +301,23 @@
             </div>
         </div>
     </header>
+
+    <!-- Mobile menu overlay (outside header to avoid stacking context issues) -->
+    <div class="mobile-menu-overlay hidden" id="mobile-menu-overlay">
+        <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Fermer le menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+        </button>
+        <nav class="mobile-menu-nav" aria-label="Navigation mobile">
+            <a href="#produit" class="mobile-menu-link" data-i18n="nav.product">Notre produit</a>
+            <a href="#recettes" class="mobile-menu-link" data-i18n="nav.recipes">Nos recettes</a>
+            <a href="#entreprise" class="mobile-menu-link" data-i18n="nav.company">Entreprise familiale</a>
+            <a href="#articles" class="mobile-menu-link" data-i18n="nav.articles">Articles</a>
+            <a href="#points-de-vente" class="mobile-menu-link" data-i18n="nav.find">Où nous trouver ?</a>
+            <a href="#" class="mobile-menu-link" data-pro-popup>Holéo Pro</a>
+        </nav>
+    </div>
 
     <main>
         <!-- Hero Section -->
