@@ -4036,6 +4036,10 @@ img {
         height: 90px;
     }
 
+    .cookie-recipe {
+        display: none;
+    }
+
     .cookie-content {
         padding: 14px;
     }
