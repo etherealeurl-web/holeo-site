@@ -5,23 +5,52 @@
 Holéo est une alternative végétale au beurre qui s'utilise en cuisson, pâtisserie, rôtissage, assaisonnement et Airfryer. En pâtisserie, elle permet d'utiliser jusqu'à 40% de matière en moins par rapport au beurre. Elle se conserve 12 mois fermée et 3 mois après ouverture, à température ambiante — aucune réfrigération nécessaire.
 
 Fabricant : Food Ingredients France, 38 Avenue Charles de Gaulle, 03120 Lapalisse, France.
-Contact : contact@holeo.fr
+Contact : contact@holeo.fr | +33 (0) 6 29 47 01 60
 
 ## Produit
 
 - [Page principale Holéo](https://holeo.fr/): Présentation complète du produit, composition, utilisation, recettes, comparaison avec le beurre et la margarine, valeurs de l'entreprise et FAQ.
+- [Version détaillée pour LLMs](https://holeo.fr/llms-full.txt): Contenu complet structuré du site.
 
 ## Informations clés
 
 - Composition : huile de tournesol raffinée, huile de colza raffinée, arôme naturel
 - Sans lactose, sans gluten, sans huile de palme, sans conservateurs, 100% végétal (vegan)
-- Fabriqué en France (Lapalisse, Allier)
+- Fabriqué en France (Lapalisse, Allier) depuis 1994
 - Conservation : 12 mois fermé, 3 mois ouvert, température ambiante
 - Format particulier : 250 ml
 - Formats professionnels : 3L, 5L, 25L, 200L, 1000L
 - Utilisations : cuisson, pâtisserie, rôtissage, assaisonnement, Airfryer
 - Jusqu'à 40% de matière en moins en pâtisserie vs beurre
+- Source naturelle d'oméga-3 (colza) et d'oméga-6 (tournesol)
 - Clients professionnels : hôpitaux, restauration collective, traiteurs, food service, industrie
+
+## Valeurs nutritionnelles (pour 100 ml)
+
+- Énergie : 3404 kJ (828 kcal)
+- Lipides : 92 g (dont saturés 8,4 g, monoinsaturés 44 g, polyinsaturés 40 g)
+- Protéines : < 0,1 g
+- Glucides : < 0,1 g (dont sucres < 0,1 g)
+- Sel : < 0,1 g
+- Activité vitaminique : 50 mg / 100 ml
+
+## Comparaison : Holéo vs Beurre vs Margarine
+
+| Critère | Holéo | Beurre | Margarine |
+|---|---|---|---|
+| Origine | 100% végétale | Animale (lait) | Végétale + additifs |
+| Ingrédients | 3 ingrédients naturels | Crème de lait, sel | 10+ ingrédients |
+| Lactose | Sans | Contient | Variable |
+| Gluten | Sans | Sans | Variable |
+| Huile de palme | Sans | Sans | Souvent présente |
+| Conservation | 12 mois (T° ambiante) | 2-3 mois (réfrigéré) | 6 mois (réfrigéré) |
+| Cuisson haute T° | Oui, ne brûle pas | Non, brûle à 130°C | Variable |
+| Oméga-3 / Oméga-6 | Source naturelle | Traces | Variable |
+| Convient aux végans | Oui | Non | Variable |
+
+## English Summary
+
+Holéo is a plant-based butter-flavored oil, 100% natural, made in France since 1994. Only 3 ingredients: sunflower oil, rapeseed oil, natural flavor. Dairy-free, gluten-free, palm oil-free, vegan. Use 40% less than butter in baking. Shelf-stable 12 months unopened, 3 months opened. Available in 250ml (retail) and 3L-1000L (professional).
 
 ## Liens légaux
 

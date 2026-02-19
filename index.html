@@ -65,12 +65,14 @@
             "availableLanguage": "French"
         },
         "sameAs": [
-            "https://instagram.com/holeo_france"
+            "https://instagram.com/holeo_france",
+            "https://www.linkedin.com/company/holeo-france",
+            "https://www.facebook.com/holeoFrance"
         ]
     }
     </script>
 
-    <!-- Structured Data: Product -->
+    <!-- Structured Data: Product (enriched with Nutrition, Offer) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -90,43 +92,50 @@
             "https://holeo.fr/assets/images/hero-image.webp",
             "https://holeo.fr/assets/images/bouteille-entiere.webp"
         ],
+        "sku": "HOLEO-250ML",
+        "gtin13": "",
         "category": "Huiles et matières grasses végétales",
         "countryOfOrigin": {
             "@type": "Country",
             "name": "France"
         },
         "material": "Huile de tournesol raffinée (France ou UE), huile de colza raffinée (France ou UE), arôme naturel (UE)",
-        "additionalProperty": [
-            {
-                "@type": "PropertyValue",
-                "name": "Contenance",
-                "value": "250 ml"
+        "nutrition": {
+            "@type": "NutritionInformation",
+            "servingSize": "100 ml",
+            "calories": "828 kcal",
+            "fatContent": "92 g",
+            "saturatedFatContent": "8.4 g",
+            "unsaturatedFatContent": "84 g",
+            "transFatContent": "0 g",
+            "carbohydrateContent": "0 g",
+            "sugarContent": "0 g",
+            "proteinContent": "0 g",
+            "sodiumContent": "0 g"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://holeo.fr/#points-de-vente",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "Holéo"
             },
-            {
-                "@type": "PropertyValue",
-                "name": "Conservation",
-                "value": "12 mois fermé, 3 mois après ouverture, à température ambiante"
-            },
-            {
-                "@type": "PropertyValue",
-                "name": "Sans lactose",
-                "value": "Oui"
-            },
-            {
-                "@type": "PropertyValue",
-                "name": "Sans gluten",
-                "value": "Oui"
-            },
-            {
-                "@type": "PropertyValue",
-                "name": "Sans huile de palme",
-                "value": "Oui"
-            },
-            {
-                "@type": "PropertyValue",
-                "name": "Vegan",
-                "value": "Oui"
+            "areaServed": {
+                "@type": "Country",
+                "name": "France"
             }
+        },
+        "additionalProperty": [
+            { "@type": "PropertyValue", "name": "Contenance", "value": "250 ml" },
+            { "@type": "PropertyValue", "name": "Conservation", "value": "12 mois fermé, 3 mois après ouverture, à température ambiante" },
+            { "@type": "PropertyValue", "name": "Sans lactose", "value": "Oui" },
+            { "@type": "PropertyValue", "name": "Sans gluten", "value": "Oui" },
+            { "@type": "PropertyValue", "name": "Sans huile de palme", "value": "Oui" },
+            { "@type": "PropertyValue", "name": "Vegan", "value": "Oui" },
+            { "@type": "PropertyValue", "name": "Oméga-3", "value": "Source naturelle (colza)" },
+            { "@type": "PropertyValue", "name": "Oméga-6", "value": "Source naturelle (tournesol)" }
         ],
         "audience": {
             "@type": "PeopleAudience",
@@ -218,9 +227,99 @@
         "name": "Holéo",
         "url": "https://holeo.fr",
         "description": "Holéo, l'alternative végétale au beurre. Huile végétale au goût beurre, 100% naturelle, fabriquée en France avec seulement 3 ingrédients.",
-        "inLanguage": "fr"
+        "inLanguage": "fr",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Holéo",
+            "url": "https://holeo.fr"
+        }
     }
     </script>
+
+    <!-- Structured Data: HowTo (pâtisserie substitution) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Comment remplacer le beurre par Holéo en pâtisserie",
+        "description": "Utilisez Holéo à la place du beurre fondu dans toutes vos recettes de pâtisserie avec 40% de matière en moins, sans changer le goût.",
+        "totalTime": "PT2M",
+        "supply": [
+            { "@type": "HowToSupply", "name": "Holéo huile végétale au goût beurre" }
+        ],
+        "step": [
+            {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Calculer la quantité",
+                "text": "Pour 100 g de beurre indiqués dans la recette, utilisez 60 ml de Holéo. Cela représente 40% de matière en moins."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Incorporer directement",
+                "text": "Holéo est liquide à température ambiante : ajoutez-la directement dans la préparation sans la faire fondre au préalable."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Cuire normalement",
+                "text": "Enfournez ou cuisez comme d'habitude. Holéo supporte les hautes températures de cuisson sans brûler."
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: HowTo (cuisson) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Comment cuisiner avec Holéo au quotidien",
+        "description": "Holéo remplace le beurre en cuisson, poêlage, rôtissage et assaisonnement. Liquide à température ambiante, elle s'utilise directement.",
+        "totalTime": "PT1M",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Verser dans la poêle",
+                "text": "Versez directement Holéo dans votre poêle ou casserole. Pas besoin de la faire fondre, elle est prête à l'emploi."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Cuisiner à la température souhaitée",
+                "text": "Holéo supporte les hautes températures : poêlage, rôtissage, Airfryer, four. Elle ne brûle pas comme le beurre."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Assaisonner à froid",
+                "text": "En assaisonnement, ajoutez un filet de Holéo sur vos pâtes, légumes ou tartines pour un goût beurré sans matière animale."
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: ItemList (recettes) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Recettes avec Holéo",
+        "description": "Nos idées recettes pour cuisiner avec l'huile végétale au goût beurre Holéo",
+        "numberOfItems": 3,
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Haricots verts au beurre Holéo", "url": "https://holeo.fr/#recettes" },
+            { "@type": "ListItem", "position": 2, "name": "Roux onctueux avec Holéo", "url": "https://holeo.fr/#recettes" },
+            { "@type": "ListItem", "position": 3, "name": "Brioches légères avec Holéo", "url": "https://holeo.fr/#recettes" }
+        ]
+    }
+    </script>
+
+    <!-- Content freshness -->
+    <meta http-equiv="content-language" content="fr">
+    <meta property="article:modified_time" content="2026-02-19T00:00:00+01:00">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -359,7 +458,7 @@
             <div class="product-desc-inner">
                 <div class="product-image-wrapper">
                     <img src="assets/images/oil-splash.webp" alt="" class="oil-splash-decoration" aria-hidden="true" loading="lazy">
-                    <img src="assets/images/product-woman.webp" alt="Femme tenant une bouteille Holéo en cuisine" class="product-main-image" loading="lazy">
+                    <img src="assets/images/product-woman.webp" alt="Femme tenant une bouteille Holéo en cuisine" class="product-main-image" width="600" height="600" loading="lazy">
                     <img src="assets/images/MACARON.webp" alt="Arôme naturel, sans beurre" class="badge-arome-img" loading="lazy">
                 </div>
                 <div class="product-info">
@@ -513,7 +612,7 @@
                         <div class="practical-orbit-ring"></div>
                         <canvas id="bottle-canvas" width="500" height="700" class="practical-bottle" aria-label="Bouteille Holéo en rotation"></canvas>
                         <!-- Fallback si les frames ne sont pas chargées -->
-                        <img src="assets/images/bouteille-entiere.webp" alt="Bouteille Holéo" class="practical-bottle practical-bottle-fallback" loading="lazy">
+                        <img src="assets/images/bouteille-entiere.webp" alt="Bouteille Holéo" class="practical-bottle practical-bottle-fallback" width="400" height="800" loading="lazy">
                     </div>
                     <!-- Right arguments -->
                     <div class="practical-orbit-col practical-orbit-right">

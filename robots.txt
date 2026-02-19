@@ -3,7 +3,6 @@
 # Allow all search engines
 User-agent: *
 Allow: /
-Disallow: /assets/images/GIF/
 Disallow: /assets/images/bottle-frames/
 
 # Allow AI crawlers explicitly
@@ -22,7 +21,13 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
@@ -32,6 +37,24 @@ User-agent: Bingbot
 Allow: /
 
 User-agent: Cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: GrokBot
+Allow: /
+
+User-agent: Timpibot
 Allow: /
 
 # Sitemap

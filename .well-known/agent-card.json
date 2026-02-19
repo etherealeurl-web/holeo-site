@@ -1,0 +1,21 @@
+{
+    "name": "Holéo",
+    "description": "Holéo — alternative végétale au beurre. Huile végétale au goût beurre, 100% naturelle, fabriquée en France avec 3 ingrédients. Information produit, recettes, points de vente et contact professionnel.",
+    "url": "https://holeo.fr",
+    "version": "1.0",
+    "provider": {
+        "organization": "Food Ingredients France",
+        "url": "https://holeo.fr"
+    },
+    "capabilities": {
+        "productInformation": true,
+        "nutritionData": true,
+        "recipes": true,
+        "storeLocator": true,
+        "professionalContact": true,
+        "faq": true
+    },
+    "documentationUrl": "https://holeo.fr/llms.txt",
+    "contact": "contact@holeo.fr",
+    "languages": ["fr", "en", "ko"]
+}
