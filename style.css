@@ -2745,7 +2745,8 @@ img {
     }
 
     .header-right .lang-switcher {
-        display: none;
+        display: block;
+        order: -1;
     }
 
     /* Mobile: show Holéo Pro, hide Où nous trouver */
@@ -4551,9 +4552,27 @@ img {
         padding: 0 12px;
     }
 
+    .header-right {
+        gap: 8px;
+    }
+
     .header-right .btn-secondary {
         padding: 8px 12px;
         font-size: 12px;
+    }
+
+    .lang-current {
+        padding: 4px 8px;
+    }
+
+    .flag-icon {
+        width: 20px;
+        height: 15px;
+    }
+
+    .lang-chevron {
+        width: 8px;
+        height: 5px;
     }
 
     .logo {
