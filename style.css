@@ -3469,13 +3469,8 @@ img {
         grid-template-columns: 1fr;
     }
 
-    /* Contact bubble mobile */
+    /* Contact bubble mobile — masquée */
     .contact-bubble {
-        bottom: 16px;
-        right: 16px;
-    }
-
-    .contact-bubble-label {
         display: none;
     }
 
