@@ -508,12 +508,13 @@ if (cookiePopup) {
     if (acceptBtn) acceptBtn.addEventListener('click', () => closeCookiePopup('all'));
     if (refuseBtn) refuseBtn.addEventListener('click', () => closeCookiePopup('essential'));
 
-    // Cookie accordion toggle
-    cookiePopup.querySelectorAll('.cookie-accordion-header').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const item = btn.parentElement;
-            item.classList.toggle('open');
-            btn.setAttribute('aria-expanded', item.classList.contains('open'));
+    // Cookie recipe accordion toggle
+    const recipeToggle = document.getElementById('cookie-recipe-toggle');
+    const recipeContent = document.getElementById('cookie-recipe-content');
+    if (recipeToggle && recipeContent) {
+        recipeToggle.addEventListener('click', () => {
+            recipeToggle.classList.toggle('open');
+            recipeContent.classList.toggle('open');
         });
-    });
+    }
 }

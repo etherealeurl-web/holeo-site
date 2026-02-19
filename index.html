@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holéo - Alternative au beurre 100% végétale & gourmande | Fabriqué en France</title>
-    <meta name="description" content="Holéo, huile végétale au goût beurre. 3 ingrédients naturels, sans lactose, sans gluten, sans huile de palme. Conservation à température ambiante. Fabriquée en France.">
-    <meta name="keywords" content="alternative beurre, huile végétale, beurre végétal, sans lactose, sans gluten, cuisine végétale, Holéo, fabriqué en France">
+    <meta name="theme-color" content="#3B7D23">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="Food Ingredients France">
+    <meta name="geo.region" content="FR-03">
+    <meta name="geo.placename" content="Lapalisse, Allier, France">
+    <meta name="geo.position" content="46.2492;3.6361">
+    <meta name="ICBM" content="46.2492, 3.6361">
+    <title>Holéo - Alternative végétale au beurre | Huile goût beurre 100% naturelle | Fabriquée en France</title>
+    <meta name="description" content="Holéo : huile végétale au goût beurre, 100% naturelle. Seulement 3 ingrédients, sans lactose, sans gluten, sans huile de palme. Cuisson, pâtisserie, assaisonnement. 40% de matière en moins vs beurre. Conservation température ambiante. Fabriquée en France depuis 1994.">
+    <meta name="keywords" content="alternative beurre, huile végétale goût beurre, beurre végétal, sans lactose, sans gluten, sans huile de palme, cuisine végétale, Holéo, fabriqué en France, vegan, huile cuisson, pâtisserie végétale, alternative margarine, Lapalisse, Food Ingredients">
     <link rel="canonical" href="https://holeo.fr/">
 
     <!-- Open Graph -->
@@ -26,14 +33,50 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/images/favicon-heart.png">
     <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="assets/images/favicon-heart.png">
 
-    <!-- Structured Data -->
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://holeo.fr/">
+    <link rel="alternate" hreflang="x-default" href="https://holeo.fr/">
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Holéo",
+        "legalName": "Food Ingredients France",
+        "url": "https://holeo.fr",
+        "logo": "https://holeo.fr/assets/images/logo-holeo.webp",
+        "foundingDate": "1994",
+        "description": "Holéo est une marque française d'huile végétale au goût beurre, fabriquée par Food Ingredients et l'Huilerie de Lapalisse depuis 1994.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "38 Avenue Charles de Gaulle",
+            "addressLocality": "Lapalisse",
+            "postalCode": "03120",
+            "addressCountry": "FR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@holeo.fr",
+            "telephone": "+33629470160",
+            "contactType": "customer service",
+            "availableLanguage": "French"
+        },
+        "sameAs": [
+            "https://instagram.com/holeo_france"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: Product -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Holéo Beurre Gourmet",
-        "description": "Huile végétale au goût beurre, 100% naturelle, avec seulement 3 ingrédients. Alternative végétale et gourmande au beurre, fabriquée en France.",
+        "description": "Huile végétale au goût beurre, 100% naturelle, composée de seulement 3 ingrédients : huile de tournesol, huile de colza et arôme naturel. Alternative végétale au beurre, sans lactose, sans gluten, sans huile de palme, sans conservateurs. Fabriquée en France.",
         "brand": {
             "@type": "Brand",
             "name": "Holéo"
@@ -43,12 +86,57 @@
             "name": "Food Ingredients",
             "url": "https://holeo.fr"
         },
-        "image": "https://holeo.fr/assets/images/hero-image.webp",
+        "image": [
+            "https://holeo.fr/assets/images/hero-image.webp",
+            "https://holeo.fr/assets/images/bouteille-entiere.webp"
+        ],
         "category": "Huiles et matières grasses végétales",
-        "countryOfOrigin": "FR",
-        "material": "Huile de tournesol raffinée (France ou UE), huile de colza raffinée (France ou UE), arôme naturel (UE)"
+        "countryOfOrigin": {
+            "@type": "Country",
+            "name": "France"
+        },
+        "material": "Huile de tournesol raffinée (France ou UE), huile de colza raffinée (France ou UE), arôme naturel (UE)",
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "name": "Contenance",
+                "value": "250 ml"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Conservation",
+                "value": "12 mois fermé, 3 mois après ouverture, à température ambiante"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Sans lactose",
+                "value": "Oui"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Sans gluten",
+                "value": "Oui"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Sans huile de palme",
+                "value": "Oui"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Vegan",
+                "value": "Oui"
+            }
+        ],
+        "audience": {
+            "@type": "PeopleAudience",
+            "suggestedMinAge": 0,
+            "audienceType": "Consommateurs, professionnels de la restauration"
+        }
     }
     </script>
+
+    <!-- Structured Data: FAQPage -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -59,7 +147,7 @@
                 "name": "Qu'est-ce que Holéo exactement ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Holéo est une huile végétale au goût beurre, composée de seulement 3 ingrédients naturels. Ce n'est ni du beurre, ni de la margarine, mais une alternative végétale pensée pour la cuisine du quotidien."
+                    "text": "Holéo est une huile végétale au goût beurre, composée de seulement 3 ingrédients naturels : huile de tournesol raffinée, huile de colza raffinée et arôme naturel. Ce n'est ni du beurre, ni de la margarine, mais une alternative 100% végétale, sans lactose, sans gluten et sans huile de palme, pensée pour la cuisine du quotidien. Fabriquée en France par Food Ingredients et l'Huilerie de Lapalisse."
                 }
             },
             {
@@ -67,7 +155,7 @@
                 "name": "Quelle est la composition de Holéo ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "3 ingrédients : huile de tournesol raffinée, huile de colza raffinée et arôme naturel. Sans sel, sans lactose, sans gluten, sans huile de palme et sans conservateurs."
+                    "text": "Holéo contient uniquement 3 ingrédients : huile de tournesol raffinée (origine France ou UE), huile de colza raffinée (origine France ou UE) et arôme naturel (origine UE). Sans sel, sans lactose, sans gluten, sans huile de palme et sans conservateurs."
                 }
             },
             {
@@ -75,7 +163,7 @@
                 "name": "Comment utiliser Holéo en cuisine ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Holéo s'utilise partout : cuisson, rôtissage, pâtisserie, assaisonnement et même dans votre Airfryer. En pâtisserie, utilisez jusqu'à 40% de matière en moins par rapport au beurre."
+                    "text": "Holéo s'utilise partout : cuisson, poêlage, rôtissage, pâtisserie, assaisonnement et même dans un Airfryer. En pâtisserie, utilisez jusqu'à 40% de matière en moins par rapport au beurre. Elle convient aussi bien pour les recettes sucrées que salées, chaudes ou froides."
                 }
             },
             {
@@ -83,10 +171,54 @@
                 "name": "Comment conserver Holéo ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Le produit se conserve 12 mois lorsqu'il est fermé et 3 mois après ouverture, à température ambiante. Aucune réfrigération nécessaire."
+                    "text": "Holéo se conserve 12 mois lorsque la bouteille est fermée et 3 mois après ouverture, à température ambiante. Aucune réfrigération n'est nécessaire, contrairement au beurre traditionnel."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Holéo est-elle adaptée aux professionnels de la restauration ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, Holéo existe en formats professionnels : bidons de 3L, 5L, 25L, 200L et 1000L. Elle est utilisée par les hôpitaux, la restauration collective, les traiteurs, le food service et l'industrie agroalimentaire."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Holéo convient-elle aux régimes végétaliens et sans lactose ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, Holéo est 100% végétale et convient parfaitement aux régimes végétaliens (vegan), végétariens, sans lactose et sans gluten. Elle ne contient aucun ingrédient d'origine animale."
                 }
             }
         ]
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://holeo.fr/"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: WebSite (for sitelinks search) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Holéo",
+        "url": "https://holeo.fr",
+        "description": "Holéo, l'alternative végétale au beurre. Huile végétale au goût beurre, 100% naturelle, fabriquée en France avec seulement 3 ingrédients.",
+        "inLanguage": "fr"
     }
     </script>
 
@@ -136,6 +268,7 @@
                 <a href="#produit" class="nav-link active" data-i18n="nav.product">Notre produit</a>
                 <a href="#recettes" class="nav-link" data-i18n="nav.recipes">Nos recettes</a>
                 <a href="#entreprise" class="nav-link" data-i18n="nav.company">Entreprise familiale</a>
+                <a href="#articles" class="nav-link" data-i18n="nav.articles">Articles</a>
                 <a href="#points-de-vente" class="nav-link nav-mobile-only" data-i18n="nav.find">Où nous trouver ?</a>
             </nav>
             <div class="header-right">
@@ -403,7 +536,7 @@
         </section>
 
         <!-- Usage Section -->
-        <section class="usage-section fade-in-section" id="recettes">
+        <section class="usage-section fade-in-section" id="recettes" aria-label="Utilisations et recettes">
             <div class="usage-inner">
                 <div class="usage-header">
                     <h2 data-i18n="usage.title">Et qui s'utilise<br><span class="underline"><strong>partout !</strong></span></h2>
@@ -609,7 +742,7 @@
         </section>
 
         <!-- Company Story Section -->
-        <section class="story-section fade-in-section" id="entreprise">
+        <section class="story-section fade-in-section" id="entreprise" aria-label="Notre histoire">
             <div class="story-leaf-parallax" aria-hidden="true">
                 <img src="assets/images/leaf.webp" alt="" loading="lazy">
             </div>
@@ -726,6 +859,51 @@
             </div>
         </section>
 
+        <!-- Articles Section -->
+        <section class="articles-section fade-in-section" id="articles" aria-label="Nos articles">
+            <div class="articles-inner">
+                <h2>Nos <span class="underline"><strong>articles</strong></span></h2>
+                <div class="articles-grid">
+                    <article class="article-card stagger-child">
+                        <div class="article-card-img">
+                            <img src="assets/images/recipe-haricots.webp" alt="Pourquoi choisir une alternative végétale au beurre ?" loading="lazy">
+                            <span class="article-badge">Conseil</span>
+                        </div>
+                        <div class="article-card-content">
+                            <time datetime="2026-02-15">15 février 2026</time>
+                            <h3>Pourquoi choisir une alternative végétale au beurre ?</h3>
+                            <p>Découvrez les avantages d'une huile végétale au goût beurre pour votre santé et l'environnement.</p>
+                            <a href="#" class="article-link">Lire la suite →</a>
+                        </div>
+                    </article>
+                    <article class="article-card stagger-child">
+                        <div class="article-card-img">
+                            <img src="assets/images/recipe-brioches.webp" alt="5 astuces pour réussir sa pâtisserie avec Holéo" loading="lazy">
+                            <span class="article-badge">Astuce</span>
+                        </div>
+                        <div class="article-card-content">
+                            <time datetime="2026-02-10">10 février 2026</time>
+                            <h3>5 astuces pour réussir sa pâtisserie avec Holéo</h3>
+                            <p>Brioches, gâteaux, crêpes… Nos conseils pour des résultats parfaits avec 40% de matière en moins.</p>
+                            <a href="#" class="article-link">Lire la suite →</a>
+                        </div>
+                    </article>
+                    <article class="article-card stagger-child">
+                        <div class="article-card-img">
+                            <img src="assets/images/product-woman.webp" alt="Holéo : l'histoire de deux entreprises familiales françaises" loading="lazy">
+                            <span class="article-badge">Histoire</span>
+                        </div>
+                        <div class="article-card-content">
+                            <time datetime="2026-01-28">28 janvier 2026</time>
+                            <h3>Holéo : l'histoire de deux entreprises familiales françaises</h3>
+                            <p>Depuis 1994, Food Ingredients et l'Huilerie de Lapalisse unissent leur savoir-faire pour innover.</p>
+                            <a href="#" class="article-link">Lire la suite →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- FAQ Section -->
         <section class="faq-section fade-in-section" aria-label="Questions fréquentes">
             <div class="faq-inner">
@@ -802,7 +980,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="contact-section fade-in-section" id="contact">
+        <section class="contact-section fade-in-section" id="contact" aria-label="Nous contacter">
             <div class="contact-section-inner">
                 <div class="contact-section-text">
                     <h2>Nous <span class="underline"><strong>contacter</strong></span></h2>
@@ -836,7 +1014,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
         <div class="footer-cta" id="points-de-vente">
             <div class="footer-cta-inner">
                 <div class="footer-cta-text">
@@ -1027,9 +1205,14 @@
                 <p class="cookie-heading">🍪 Ce site utilise des cookies</p>
                 <p class="cookie-desc">Nous utilisons des cookies essentiels pour le bon fonctionnement du site, ainsi que des cookies analytiques pour comprendre comment vous interagissez avec celui-ci. Aucune donnée personnelle n'est partagée avec des tiers.</p>
                 <div class="cookie-recipe">
-                    <p class="cookie-recipe-title">Notre recette de cookies à l'Holéo</p>
-                    <p class="cookie-recipe-text"><strong>Ingrédients :</strong> Farine 150g · Sucre roux 50g · Œuf 1x · <strong>Holéo 60ml</strong> · Pépites de chocolat 80g · Noisettes concassées 50g · Levure ½ sachet</p>
-                    <p class="cookie-recipe-text"><strong>Préparation :</strong> Préchauffez à 180°C. Mélangez œuf + sucre. Ajoutez Holéo, farine, levure. Incorporez pépites et noisettes. Formez des tas, enfournez 12 min.</p>
+                    <button type="button" class="cookie-recipe-toggle" id="cookie-recipe-toggle">
+                        <span class="cookie-recipe-title">Notre recette de cookies à l'Holéo</span>
+                        <svg class="cookie-recipe-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="cookie-recipe-content" id="cookie-recipe-content">
+                        <p class="cookie-recipe-text"><strong>Ingrédients :</strong> Farine 150g · Sucre roux 50g · Œuf 1x · <strong>Holéo 60ml</strong> · Pépites de chocolat 80g · Noisettes concassées 50g · Levure ½ sachet</p>
+                        <p class="cookie-recipe-text"><strong>Préparation :</strong> Préchauffez à 180°C. Mélangez œuf + sucre. Ajoutez Holéo, farine, levure. Incorporez pépites et noisettes. Formez des tas, enfournez 12 min.</p>
+                    </div>
                 </div>
                 <div class="cookie-actions">
                     <button class="btn btn-primary cookie-btn-accept" id="cookie-accept">Accepter tout</button>
