@@ -3229,25 +3229,31 @@ img {
     }
 
     .company-label {
-        padding: 8px 14px;
+        padding: 10px 16px;
         border-radius: 12px;
+        white-space: normal;
+        max-width: 200px;
     }
 
     .company-label h4 {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .company-label p {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .company-label-bottom {
-        bottom: -16px;
+        bottom: -24px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .company-label-top {
-        top: -16px;
-        right: -10px;
+        top: -24px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     /* Values mobile */
@@ -3594,7 +3600,8 @@ img {
     }
 
     .values-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
     .pro-section {
@@ -4785,12 +4792,17 @@ img {
         height: 160px;
     }
 
+    .company-label {
+        max-width: 170px;
+        padding: 8px 12px;
+    }
+
     .company-label h4 {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .company-label p {
-        font-size: 10px;
+        font-size: 9px;
     }
 
     /* Values iPhone */
@@ -4803,11 +4815,12 @@ img {
     }
 
     .values-grid {
-        gap: 8px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
     }
 
     .value-card {
-        min-height: 170px;
+        min-height: 150px;
     }
 
     .value-card-back h3 {
