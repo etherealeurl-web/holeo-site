@@ -973,8 +973,25 @@
         <section class="articles-section fade-in-section" id="articles" aria-label="Nos articles">
             <div class="articles-inner">
                 <h2>Nos <span class="underline"><strong>articles</strong></span></h2>
-                <div class="articles-grid">
-                    <article class="article-card stagger-child">
+
+                <div class="articles-toolbar">
+                    <div class="articles-filters" role="tablist" aria-label="Filtrer par catégorie">
+                        <button class="articles-filter-btn active" data-filter="all" role="tab" aria-selected="true">Tous</button>
+                        <button class="articles-filter-btn" data-filter="santé" role="tab" aria-selected="false">Santé</button>
+                        <button class="articles-filter-btn" data-filter="écologie" role="tab" aria-selected="false">Écologie</button>
+                        <button class="articles-filter-btn" data-filter="cuisine" role="tab" aria-selected="false">Cuisine</button>
+                        <button class="articles-filter-btn" data-filter="astuce" role="tab" aria-selected="false">Astuce</button>
+                        <button class="articles-filter-btn" data-filter="comparatif" role="tab" aria-selected="false">Comparatif</button>
+                        <button class="articles-filter-btn" data-filter="histoire" role="tab" aria-selected="false">Histoire</button>
+                    </div>
+                    <div class="articles-search-wrapper">
+                        <svg class="articles-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        <input type="search" class="articles-search" id="articles-search" placeholder="Rechercher un article…" aria-label="Rechercher un article">
+                    </div>
+                </div>
+
+                <div class="articles-grid" id="articles-grid">
+                    <article class="article-card stagger-child" data-category="conseil" data-category-alt="santé">
                         <div class="article-card-img">
                             <img src="assets/images/recipe-haricots.webp" alt="Pourquoi choisir une alternative végétale au beurre ?" loading="lazy">
                             <span class="article-badge">Conseil</span>
@@ -986,7 +1003,7 @@
                             <a href="articles/alternative-vegetale-beurre.html" class="article-link">Lire la suite →</a>
                         </div>
                     </article>
-                    <article class="article-card stagger-child">
+                    <article class="article-card stagger-child" data-category="astuce">
                         <div class="article-card-img">
                             <img src="assets/images/recipe-brioches.webp" alt="5 astuces pour réussir sa pâtisserie avec Holéo" loading="lazy">
                             <span class="article-badge">Astuce</span>
@@ -998,7 +1015,7 @@
                             <a href="articles/patisserie-holeo-astuces.html" class="article-link">Lire la suite →</a>
                         </div>
                     </article>
-                    <article class="article-card stagger-child">
+                    <article class="article-card stagger-child" data-category="histoire">
                         <div class="article-card-img">
                             <img src="assets/images/product-woman.webp" alt="Holéo : l'histoire de deux entreprises familiales françaises" loading="lazy">
                             <span class="article-badge">Histoire</span>
@@ -1010,7 +1027,7 @@
                             <a href="articles/histoire-entreprises-familiales.html" class="article-link">Lire la suite →</a>
                         </div>
                     </article>
-                    <article class="article-card stagger-child">
+                    <article class="article-card stagger-child" data-category="santé">
                         <div class="article-card-img">
                             <img src="assets/images/value-manger.webp" alt="Cholestérol : comprendre et réduire grâce au végétal" loading="lazy">
                             <span class="article-badge">Santé</span>
@@ -1022,7 +1039,7 @@
                             <a href="articles/cholesterol-reduire-vegetale.html" class="article-link">Lire la suite →</a>
                         </div>
                     </article>
-                    <article class="article-card stagger-child">
+                    <article class="article-card stagger-child" data-category="écologie">
                         <div class="article-card-img">
                             <img src="assets/images/value-climat.webp" alt="L'impact écologique du beurre vs les huiles végétales" loading="lazy">
                             <span class="article-badge">Écologie</span>
@@ -1034,7 +1051,7 @@
                             <a href="articles/impact-ecologique-beurre-huiles-vegetales.html" class="article-link">Lire la suite →</a>
                         </div>
                     </article>
-                    <article class="article-card stagger-child">
+                    <article class="article-card stagger-child" data-category="cuisine">
                         <div class="article-card-img">
                             <img src="assets/images/recipe-roux.webp" alt="Cuisine végétale : le goût sans compromis" loading="lazy">
                             <span class="article-badge">Cuisine</span>
@@ -1046,7 +1063,7 @@
                             <a href="articles/cuisine-vegetale-gout-sans-compromis.html" class="article-link">Lire la suite →</a>
                         </div>
                     </article>
-                    <article class="article-card stagger-child">
+                    <article class="article-card stagger-child" data-category="astuce">
                         <div class="article-card-img">
                             <img src="assets/images/recipe-legumes-rotis.webp" alt="Airfryer + Holéo : le combo parfait" loading="lazy">
                             <span class="article-badge">Astuce</span>
@@ -1058,7 +1075,7 @@
                             <a href="articles/airfryer-holeo-combo-parfait.html" class="article-link">Lire la suite →</a>
                         </div>
                     </article>
-                    <article class="article-card stagger-child">
+                    <article class="article-card stagger-child" data-category="comparatif">
                         <div class="article-card-img">
                             <img src="assets/images/comparison-holeo-bottle.webp" alt="Beurre, margarine ou huile végétale : que choisir ?" loading="lazy">
                             <span class="article-badge">Comparatif</span>
@@ -1071,6 +1088,7 @@
                         </div>
                     </article>
                 </div>
+                <p class="articles-no-result" id="articles-no-result" hidden>Aucun article trouvé.</p>
             </div>
         </section>
 

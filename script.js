@@ -545,3 +545,91 @@ if (cookiePopup) {
         });
     }
 }
+
+// =============================
+// Articles filter + search
+// =============================
+{
+    const grid = document.getElementById('articles-grid');
+    const searchInput = document.getElementById('articles-search');
+    const noResult = document.getElementById('articles-no-result');
+    const filterBtns = document.querySelectorAll('.articles-filter-btn');
+
+    if (grid && searchInput && filterBtns.length) {
+        const cards = Array.from(grid.querySelectorAll('.article-card'));
+        let activeFilter = 'all';
+
+        function normalize(str) {
+            return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
+        function filterArticles() {
+            const query = normalize(searchInput.value.trim());
+            const isFiltering = activeFilter !== 'all' || query.length > 0;
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const category = normalize(card.dataset.category || '');
+                const categoryAlt = normalize(card.dataset.categoryAlt || '');
+                const title = normalize(card.querySelector('h3')?.textContent || '');
+                const desc = normalize(card.querySelector('p')?.textContent || '');
+                const badge = normalize(card.querySelector('.article-badge')?.textContent || '');
+
+                // Category filter
+                let matchCategory = activeFilter === 'all' ||
+                    category === normalize(activeFilter) ||
+                    categoryAlt === normalize(activeFilter);
+
+                // Search filter
+                let matchSearch = !query ||
+                    title.includes(query) ||
+                    desc.includes(query) ||
+                    badge.includes(query) ||
+                    category.includes(query);
+
+                if (matchCategory && matchSearch) {
+                    card.classList.remove('card-hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('card-hidden');
+                }
+            });
+
+            // Toggle filtered class on grid (for mobile layout switch)
+            grid.classList.toggle('filtered', isFiltering);
+
+            // No result message
+            if (noResult) {
+                noResult.hidden = visibleCount > 0;
+            }
+        }
+
+        // Filter buttons
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-selected', 'false');
+                });
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+                activeFilter = btn.dataset.filter;
+                filterArticles();
+            });
+        });
+
+        // Search input
+        searchInput.addEventListener('input', () => {
+            filterArticles();
+        });
+
+        // Clear search on Escape
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                filterArticles();
+                searchInput.blur();
+            }
+        });
+    }
+}
