@@ -2697,13 +2697,35 @@ img {
 
     /* Story */
     .story-companies {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
     }
 
     .company-circle {
         width: 280px;
-        height: 280px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .company-circle-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .company-label {
+        position: static;
+        transform: none;
+        margin-top: 12px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .company-circle:hover .company-label,
+    .company-circle:hover .company-label-top {
+        transform: none;
     }
 
     /* Promo */
@@ -3221,19 +3243,25 @@ img {
     }
 
     .story-companies {
-        gap: 50px;
+        gap: 16px;
     }
 
     .company-circle {
-        width: 220px;
-        height: 220px;
+        width: auto;
+        flex: 1;
+    }
+
+    .company-circle-img {
+        width: 150px;
+        height: 150px;
     }
 
     .company-label {
-        padding: 10px 16px;
-        border-radius: 12px;
-        white-space: normal;
-        max-width: 200px;
+        max-width: none;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        background: transparent;
     }
 
     .company-label h4 {
@@ -3244,17 +3272,19 @@ img {
         font-size: 11px;
     }
 
-    .company-label-bottom {
-        bottom: -24px;
-        left: 50%;
-        transform: translateX(-50%);
+    .company-label-bottom,
+    .company-label-top {
+        position: static;
+        transform: none;
     }
 
-    .company-label-top {
-        top: -24px;
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%);
+    .company-label-logo {
+        width: 28px;
+        height: 28px;
+    }
+
+    .company-label-with-logo {
+        justify-content: center;
     }
 
     /* Values mobile */
@@ -3578,26 +3608,21 @@ img {
         height: 32px;
     }
 
-    .company-circle {
-        width: 180px;
-        height: 180px;
-    }
-
     .story-companies {
-        gap: 40px;
+        gap: 12px;
     }
 
-    .company-label-top {
-        right: -6px;
-        top: -12px;
+    .company-circle-img {
+        width: 130px;
+        height: 130px;
     }
 
     .company-label h4 {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .company-label p {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .values-grid {
@@ -4803,17 +4828,12 @@ img {
     }
 
     .story-companies {
-        gap: 30px;
+        gap: 10px;
     }
 
-    .company-circle {
-        width: 160px;
-        height: 160px;
-    }
-
-    .company-label {
-        max-width: 170px;
-        padding: 8px 12px;
+    .company-circle-img {
+        width: 120px;
+        height: 120px;
     }
 
     .company-label h4 {
