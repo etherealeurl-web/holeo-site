@@ -264,7 +264,12 @@
             <a href="#" class="logo" aria-label="Holéo - Accueil">
                 <img src="assets/images/logo-holeo.webp" alt="Holéo" class="logo-img" width="120" height="32">
             </a>
-            <nav class="nav" aria-label="Navigation principale">
+            <nav class="nav" id="mobile-nav" aria-label="Navigation principale">
+                <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Fermer le menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
                 <a href="#produit" class="nav-link active" data-i18n="nav.product">Notre produit</a>
                 <a href="#recettes" class="nav-link" data-i18n="nav.recipes">Nos recettes</a>
                 <a href="#entreprise" class="nav-link" data-i18n="nav.company">Entreprise familiale</a>

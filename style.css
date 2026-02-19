@@ -233,6 +233,11 @@ img {
     display: none;
 }
 
+/* Close button hidden on desktop */
+.mobile-nav-close {
+    display: none;
+}
+
 .header-right {
     display: flex;
     align-items: center;
@@ -2697,24 +2702,52 @@ img {
         display: flex;
     }
 
+    /* Mobile nav close button — hidden on desktop */
+    .mobile-nav-close {
+        display: none;
+    }
+
     /* Mobile nav overlay */
     .nav.mobile-open {
         display: flex;
         flex-direction: column;
         position: fixed;
-        top: 60px;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         background-color: #FFFDF4;
-        padding: 24px;
+        padding: 80px 24px 24px;
         gap: 4px;
-        z-index: 200;
-        animation: slideDown 0.25s ease;
+        z-index: 300;
+        animation: mobileNavIn 0.3s ease;
+        overflow-y: auto;
+    }
+
+    .nav.mobile-open .mobile-nav-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.05);
+        border: none;
+        cursor: pointer;
+        color: #14181E;
+        z-index: 301;
+        transition: background 0.2s;
+    }
+
+    .nav.mobile-open .mobile-nav-close:active {
+        background: rgba(0, 0, 0, 0.12);
     }
 
     .nav.mobile-open .nav-link {
-        font-size: 18px;
+        font-size: 20px;
         padding: 16px 20px;
         border-radius: 12px;
         text-align: left;
@@ -2729,10 +2762,10 @@ img {
         background-color: rgba(0, 0, 0, 0.06);
     }
 
-    @keyframes slideDown {
+    @keyframes mobileNavIn {
         from {
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateY(-20px);
         }
         to {
             opacity: 1;
@@ -4389,6 +4422,8 @@ img {
         gap: 8px;
         width: 100%;
         text-align: center;
+        font-size: 14px;
+        padding: 12px 24px;
     }
 
     .pro-popup-mobile-info {
@@ -4486,8 +4521,8 @@ img {
     }
 
     .pro-popup-download {
-        font-size: 13px;
-        padding: 10px 16px;
+        font-size: 14px;
+        padding: 12px 24px;
     }
 
     .pro-download-email-row input {

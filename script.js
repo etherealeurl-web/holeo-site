@@ -275,30 +275,37 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Mobile menu toggle
+// Mobile menu
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const nav = document.querySelector('.nav');
-if (mobileMenuBtn && nav) {
-    mobileMenuBtn.addEventListener('click', () => {
-        const isOpen = nav.classList.toggle('mobile-open');
-        mobileMenuBtn.setAttribute('aria-expanded', isOpen);
-        // Toggle icon between burger and X
-        const svg = mobileMenuBtn.querySelector('svg');
-        if (isOpen) {
-            svg.innerHTML = '<path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
-        } else {
-            svg.innerHTML = '<path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
-        }
-    });
+const mobileNav = document.getElementById('mobile-nav');
+const mobileNavClose = document.getElementById('mobile-nav-close');
 
-    // Close menu when clicking a nav link
-    nav.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('mobile-open');
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-            const svg = mobileMenuBtn.querySelector('svg');
-            svg.innerHTML = '<path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>';
-        });
+function openMobileMenu() {
+    if (!mobileNav) return;
+    mobileNav.classList.add('mobile-open');
+    document.body.style.overflow = 'hidden';
+    mobileMenuBtn?.setAttribute('aria-expanded', 'true');
+}
+
+function closeMobileMenu() {
+    if (!mobileNav) return;
+    mobileNav.classList.remove('mobile-open');
+    document.body.style.overflow = '';
+    mobileMenuBtn?.setAttribute('aria-expanded', 'false');
+}
+
+if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', openMobileMenu);
+}
+
+if (mobileNavClose) {
+    mobileNavClose.addEventListener('click', closeMobileMenu);
+}
+
+// Close menu when clicking a nav link
+if (mobileNav) {
+    mobileNav.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
     });
 }
 
