@@ -867,7 +867,7 @@ img {
    PRACTICAL BENEFITS SECTION
    ============================= */
 .practical-section {
-    padding: 50px clamp(16px, 4vw, 60px) 60px;
+    padding: 50px clamp(16px, 4vw, 60px) 40px;
     background-color: #FFFDF4;
 }
 
@@ -1023,7 +1023,7 @@ img {
    USAGE / RECIPES SECTION
    ============================= */
 .usage-section {
-    padding: 80px clamp(16px, 4vw, 60px);
+    padding: 50px clamp(16px, 4vw, 60px);
     background-color: #FFFDF4;
 }
 
