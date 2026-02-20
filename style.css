@@ -665,8 +665,8 @@ img {
 
 .badge-arome-img {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: -15px;
+    left: -15px;
     width: 120px;
     height: 120px;
     object-fit: contain;
@@ -3070,8 +3070,8 @@ img {
 
     .badge-arome-img {
         width: 80px;
-        left: 10px;
-        bottom: 10px;
+        left: -10px;
+        bottom: -10px;
     }
 
     .oil-splash-decoration {
