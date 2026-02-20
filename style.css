@@ -609,6 +609,11 @@ img {
     object-fit: contain;
 }
 
+.benefit-icon-img.benefit-flag {
+    width: 36px;
+    height: 36px;
+}
+
 /* =============================
    PRODUCT DESCRIPTION
    ============================= */
