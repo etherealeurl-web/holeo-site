@@ -1112,24 +1112,80 @@ img {
 
 .recipe-card {
     flex: 0 0 280px;
-    border-radius: 24px;
-    overflow: hidden;
-    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    height: 450px;
+    perspective: 800px;
     scroll-snap-align: start;
 }
 
-.recipe-card:hover {
-    transform: translateY(-6px);
+.recipe-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    transform-style: preserve-3d;
 }
 
-.recipe-card-overlay {
-    position: relative;
-    height: 450px;
+.recipe-card:hover .recipe-card-inner {
+    transform: rotateY(180deg);
+}
+
+.recipe-card-front,
+.recipe-card-back {
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.recipe-card-front {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
+}
+
+.recipe-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 24px;
+    color: white;
+}
+
+.recipe-back-green {
+    background: linear-gradient(135deg, #2d6b1a 0%, #3B7D23 50%, #4a9a2e 100%);
+}
+
+.recipe-back-yellow {
+    background: linear-gradient(135deg, #b8960f 0%, #d4ad12 50%, #F6CE1A 100%);
+}
+
+.recipe-back-warm {
+    background: linear-gradient(135deg, #8a5518 0%, #a86820 50%, #c47e2a 100%);
+}
+
+.recipe-card-back .recipe-badge {
+    margin-bottom: 16px;
+}
+
+.recipe-card-back h4 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.recipe-card-back p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    opacity: 0.95;
 }
 
 .recipe-slider-btn {
@@ -1169,22 +1225,22 @@ img {
     color: #14181E;
 }
 
-.recipe-card-overlay::before {
+.recipe-card-front::before {
     content: '';
     position: absolute;
     inset: 0;
     border-radius: 0;
 }
 
-.recipe-card-overlay.gradient-green::before {
+.recipe-card-front.gradient-green::before {
     background: linear-gradient(to bottom, transparent 30%, rgba(30,80,15,0.92) 100%);
 }
 
-.recipe-card-overlay.gradient-yellow::before {
+.recipe-card-front.gradient-yellow::before {
     background: linear-gradient(to bottom, transparent 30%, rgba(140,110,15,0.92) 100%);
 }
 
-.recipe-card-overlay.gradient-warm::before {
+.recipe-card-front.gradient-warm::before {
     background: linear-gradient(to bottom, transparent 30%, rgba(130,80,25,0.92) 100%);
 }
 
@@ -2760,9 +2816,6 @@ img {
     /* Recipe */
     .recipe-card {
         flex: 0 0 250px;
-    }
-
-    .recipe-card-overlay {
         height: 400px;
     }
 
@@ -3221,10 +3274,11 @@ img {
 
     .recipe-card {
         flex: 0 0 220px;
+        height: 340px;
     }
 
-    .recipe-card-overlay {
-        height: 340px;
+    .recipe-card-front,
+    .recipe-card-back {
         border-radius: 16px;
     }
 
@@ -3237,6 +3291,18 @@ img {
     }
 
     .recipe-overlay-content p {
+        font-size: 13px;
+    }
+
+    .recipe-card-back {
+        padding: 20px 16px;
+    }
+
+    .recipe-card-back h4 {
+        font-size: 18px;
+    }
+
+    .recipe-card-back p {
         font-size: 13px;
     }
 
@@ -3872,10 +3938,11 @@ img {
 
     .recipe-card {
         flex: 0 0 200px;
+        height: 300px;
     }
 
-    .recipe-card-overlay {
-        height: 300px;
+    .recipe-card-front,
+    .recipe-card-back {
         border-radius: 14px;
     }
 
@@ -4947,10 +5014,11 @@ img {
     /* Recipes iPhone */
     .recipe-card {
         flex: 0 0 180px;
+        height: 270px;
     }
 
-    .recipe-card-overlay {
-        height: 270px;
+    .recipe-card-front,
+    .recipe-card-back {
         border-radius: 12px;
     }
 
@@ -4960,6 +5028,18 @@ img {
 
     .recipe-overlay-content p {
         font-size: 11px;
+    }
+
+    .recipe-card-back {
+        padding: 16px 12px;
+    }
+
+    .recipe-card-back h4 {
+        font-size: 15px;
+    }
+
+    .recipe-card-back p {
+        font-size: 12px;
     }
 
     /* Comparison iPhone */

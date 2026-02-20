@@ -610,7 +610,7 @@
                     <!-- Center bottle (scroll-rotation) -->
                     <div class="practical-orbit-center">
                         <div class="practical-orbit-ring"></div>
-                        <canvas id="bottle-canvas" width="500" height="700" class="practical-bottle" aria-label="Bouteille Holéo en rotation"></canvas>
+                        <canvas id="bottle-canvas" width="500" height="1244" class="practical-bottle" aria-label="Bouteille Holéo en rotation"></canvas>
                         <!-- Fallback si les frames ne sont pas chargées -->
                         <img src="assets/images/bouteille-entiere.webp" alt="Bouteille Holéo" class="practical-bottle practical-bottle-fallback" width="400" height="800" loading="lazy">
                     </div>
@@ -682,116 +682,244 @@
                     <svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </button>
                 <div class="recipe-grid">
-                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-haricots.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge">Salé</span>
-                            <h4>Haricots verts persillade</h4>
-                            <p>Cuire les haricots à la vapeur, puis ajouter un filet d'Holéo avec ail et persil frais.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-green" style="background-image: url('assets/images/recipe-haricots.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge">Salé</span>
+                                    <h4>Haricots verts persillade</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-green">
+                                <span class="recipe-badge">Salé</span>
+                                <h4>Haricots verts persillade</h4>
+                                <p>Cuire les haricots à la vapeur, puis ajouter un filet d'Holéo avec ail et persil frais.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-roux.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge">Salé</span>
-                            <h4>Roux</h4>
-                            <p>Chauffer Holéo à feu doux, incorporer la farine en remuant jusqu'à obtenir un roux doré.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-yellow" style="background-image: url('assets/images/recipe-roux.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge">Salé</span>
+                                    <h4>Roux</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-yellow">
+                                <span class="recipe-badge">Salé</span>
+                                <h4>Roux</h4>
+                                <p>Chauffer Holéo à feu doux, incorporer la farine en remuant jusqu'à obtenir un roux doré.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-brioches.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge recipe-badge-sweet">Sucré</span>
-                            <h4>Brioches</h4>
-                            <p>Remplacer le beurre par Holéo dans votre pâte à brioche pour des brioches moelleuses.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-warm" style="background-image: url('assets/images/recipe-brioches.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge recipe-badge-sweet">Sucré</span>
+                                    <h4>Brioches</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-warm">
+                                <span class="recipe-badge recipe-badge-sweet">Sucré</span>
+                                <h4>Brioches</h4>
+                                <p>Remplacer le beurre par Holéo dans votre pâte à brioche pour des brioches moelleuses.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-boulettes.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge">Salé</span>
-                            <h4>Boulettes</h4>
-                            <p>Dorer vos boulettes dans Holéo pour une cuisson homogène et un goût beurré irrésistible.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-green" style="background-image: url('assets/images/recipe-boulettes.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge">Salé</span>
+                                    <h4>Boulettes</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-green">
+                                <span class="recipe-badge">Salé</span>
+                                <h4>Boulettes</h4>
+                                <p>Dorer vos boulettes dans Holéo pour une cuisson homogène et un goût beurré irrésistible.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-pates.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge">Salé</span>
-                            <h4>Pâtes au beurre</h4>
-                            <p>Ajouter un filet d'Holéo sur vos pâtes chaudes pour un goût beurre fondant.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-yellow" style="background-image: url('assets/images/recipe-pates.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge">Salé</span>
+                                    <h4>Pâtes au beurre</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-yellow">
+                                <span class="recipe-badge">Salé</span>
+                                <h4>Pâtes au beurre</h4>
+                                <p>Ajouter un filet d'Holéo sur vos pâtes chaudes pour un goût beurre fondant.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-puree.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge">Salé</span>
-                            <h4>Purée</h4>
-                            <p>Incorporer Holéo à votre purée de pommes de terre pour un résultat onctueux.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-green" style="background-image: url('assets/images/recipe-puree.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge">Salé</span>
+                                    <h4>Purée</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-green">
+                                <span class="recipe-badge">Salé</span>
+                                <h4>Purée</h4>
+                                <p>Incorporer Holéo à votre purée de pommes de terre pour un résultat onctueux.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-semoule.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge">Salé</span>
-                            <h4>Semoule</h4>
-                            <p>Ajouter Holéo à la semoule en fin de cuisson pour un goût beurré et léger.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-yellow" style="background-image: url('assets/images/recipe-semoule.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge">Salé</span>
+                                    <h4>Semoule</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-yellow">
+                                <span class="recipe-badge">Salé</span>
+                                <h4>Semoule</h4>
+                                <p>Ajouter Holéo à la semoule en fin de cuisson pour un goût beurré et léger.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-riz.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge">Salé</span>
-                            <h4>Riz pilaf</h4>
-                            <p>Faire revenir le riz dans Holéo avant d'ajouter le bouillon pour un pilaf parfumé.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-green" style="background-image: url('assets/images/recipe-riz.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge">Salé</span>
+                                    <h4>Riz pilaf</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-green">
+                                <span class="recipe-badge">Salé</span>
+                                <h4>Riz pilaf</h4>
+                                <p>Faire revenir le riz dans Holéo avant d'ajouter le bouillon pour un pilaf parfumé.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-mayonnaise.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge">Salé</span>
-                            <h4>Mayonnaise</h4>
-                            <p>Remplacer l'huile classique par Holéo pour une mayo au goût beurre unique.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-yellow" style="background-image: url('assets/images/recipe-mayonnaise.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge">Salé</span>
+                                    <h4>Mayonnaise</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-yellow">
+                                <span class="recipe-badge">Salé</span>
+                                <h4>Mayonnaise</h4>
+                                <p>Remplacer l'huile classique par Holéo pour une mayo au goût beurre unique.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-hollandaise.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge">Salé</span>
-                            <h4>Sauce hollandaise</h4>
-                            <p>Préparer une hollandaise végétale onctueuse en remplaçant le beurre par Holéo.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-green" style="background-image: url('assets/images/recipe-hollandaise.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge">Salé</span>
+                                    <h4>Sauce hollandaise</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-green">
+                                <span class="recipe-badge">Salé</span>
+                                <h4>Sauce hollandaise</h4>
+                                <p>Préparer une hollandaise végétale onctueuse en remplaçant le beurre par Holéo.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-yellow" style="background-image: url('assets/images/recipe-cake-sale.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge">Salé</span>
-                            <h4>Cake salé</h4>
-                            <p>Utiliser Holéo à la place du beurre fondu pour un cake moelleux aux légumes.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-yellow" style="background-image: url('assets/images/recipe-cake-sale.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge">Salé</span>
+                                    <h4>Cake salé</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-yellow">
+                                <span class="recipe-badge">Salé</span>
+                                <h4>Cake salé</h4>
+                                <p>Utiliser Holéo à la place du beurre fondu pour un cake moelleux aux légumes.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-green" style="background-image: url('assets/images/recipe-legumes-rotis.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge">Salé</span>
-                            <h4>Légumes rôtis</h4>
-                            <p>Enrober vos légumes d'Holéo avant de les enfourner pour un rôtissage parfait.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-green" style="background-image: url('assets/images/recipe-legumes-rotis.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge">Salé</span>
+                                    <h4>Légumes rôtis</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-green">
+                                <span class="recipe-badge">Salé</span>
+                                <h4>Légumes rôtis</h4>
+                                <p>Enrober vos légumes d'Holéo avant de les enfourner pour un rôtissage parfait.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-pain-brioche.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge recipe-badge-sweet">Sucré</span>
-                            <h4>Pain brioché</h4>
-                            <p>Un pain brioché moelleux et doré grâce à Holéo, avec moins de matière grasse.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-warm" style="background-image: url('assets/images/recipe-pain-brioche.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge recipe-badge-sweet">Sucré</span>
+                                    <h4>Pain brioché</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-warm">
+                                <span class="recipe-badge recipe-badge-sweet">Sucré</span>
+                                <h4>Pain brioché</h4>
+                                <p>Un pain brioché moelleux et doré grâce à Holéo, avec moins de matière grasse.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-madeleines.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge recipe-badge-sweet">Sucré</span>
-                            <h4>Madeleines</h4>
-                            <p>Des madeleines fondantes au goût beurre en remplaçant simplement par Holéo.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-warm" style="background-image: url('assets/images/recipe-madeleines.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge recipe-badge-sweet">Sucré</span>
+                                    <h4>Madeleines</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-warm">
+                                <span class="recipe-badge recipe-badge-sweet">Sucré</span>
+                                <h4>Madeleines</h4>
+                                <p>Des madeleines fondantes au goût beurre en remplaçant simplement par Holéo.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-cake-marbre.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge recipe-badge-sweet">Sucré</span>
-                            <h4>Cake marbré</h4>
-                            <p>Un marbré chocolat-vanille ultra moelleux avec Holéo et 40% de matière en moins.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-warm" style="background-image: url('assets/images/recipe-cake-marbre.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge recipe-badge-sweet">Sucré</span>
+                                    <h4>Cake marbré</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-warm">
+                                <span class="recipe-badge recipe-badge-sweet">Sucré</span>
+                                <h4>Cake marbré</h4>
+                                <p>Un marbré chocolat-vanille ultra moelleux avec Holéo et 40% de matière en moins.</p>
+                            </div>
                         </div>
                     </article>
-                    <article class="recipe-card recipe-card-overlay gradient-warm" style="background-image: url('assets/images/recipe-crepes.webp');">
-                        <div class="recipe-overlay-content">
-                            <span class="recipe-badge recipe-badge-sweet">Sucré</span>
-                            <h4>Crêpes</h4>
-                            <p>Des crêpes dorées et parfumées au beurre grâce à Holéo dans la pâte et la cuisson.</p>
+                    <article class="recipe-card">
+                        <div class="recipe-card-inner">
+                            <div class="recipe-card-front gradient-warm" style="background-image: url('assets/images/recipe-crepes.webp');">
+                                <div class="recipe-overlay-content">
+                                    <span class="recipe-badge recipe-badge-sweet">Sucré</span>
+                                    <h4>Crêpes</h4>
+                                </div>
+                            </div>
+                            <div class="recipe-card-back recipe-back-warm">
+                                <span class="recipe-badge recipe-badge-sweet">Sucré</span>
+                                <h4>Crêpes</h4>
+                                <p>Des crêpes dorées et parfumées au beurre grâce à Holéo dans la pâte et la cuisson.</p>
+                            </div>
                         </div>
                     </article>
                 </div>

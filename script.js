@@ -164,7 +164,7 @@ if (underlines.length) {
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
         const img = new Image();
         const basePath = (window.location.pathname.match(/^\/(en|ko)\//) ? '../' : '');
-        img.src = `${basePath}assets/images/bottle-frames/${String(i).padStart(4, '0')}.webp`;
+        img.src = `${basePath}assets/images/bottle-frames/frame_${String(i - 1).padStart(4, '0')}.png`;
         img.onload = function () {
             loaded++;
             if (loaded === TOTAL_FRAMES) {
@@ -202,6 +202,7 @@ if (underlines.length) {
         const viewH = window.innerHeight;
 
         // Progress: 0 when section top enters viewport, 1 when section bottom exits
+        // Frame 0 (front face) appears at progress 0.5 (section midpoint)
         const start = rect.top - viewH;
         const end = rect.bottom;
         const total = end - start;
@@ -209,7 +210,9 @@ if (underlines.length) {
         if (total <= 0) return;
 
         const progress = Math.min(1, Math.max(0, (0 - start) / total));
-        const frameIndex = Math.min(TOTAL_FRAMES - 1, Math.floor(progress * TOTAL_FRAMES));
+        // Offset so frame 0 is at midpoint: shift by half a revolution
+        const shifted = (progress + 0.5) % 1;
+        const frameIndex = Math.min(TOTAL_FRAMES - 1, Math.floor(shifted * TOTAL_FRAMES));
 
         if (frameIndex !== currentFrame) {
             currentFrame = frameIndex;
@@ -321,23 +324,6 @@ document.querySelectorAll('.practical-orbit-item').forEach(card => {
     });
 });
 
-// Mouse-tilt effect on practical bottle
-const practicalBottleCenter = document.querySelector('.practical-orbit-center');
-if (practicalBottleCenter) {
-    practicalBottleCenter.addEventListener('mousemove', (e) => {
-        const rect = practicalBottleCenter.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        const bottle = practicalBottleCenter.querySelector('.practical-bottle');
-        if (bottle) {
-            bottle.style.transform = `perspective(800px) rotateY(${x * 12}deg) rotateX(${-y * 8}deg)`;
-        }
-    });
-    practicalBottleCenter.addEventListener('mouseleave', () => {
-        const bottle = practicalBottleCenter.querySelector('.practical-bottle');
-        if (bottle) bottle.style.transform = '';
-    });
-}
 
 // Mouse-tilt effect on entire comparison center card
 const compCard = document.querySelector('.comp-card-center');
