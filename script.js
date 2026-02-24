@@ -384,12 +384,12 @@ async function submitForm(formData, form, onSuccess) {
 // Utility: show success/error message after form submit
 function showFormSuccess(form, text, isError) {
     // Remove any existing message
-    const existing = form.parentElement.querySelector('.form-success-msg');
+    const existing = form.querySelector('.form-success-msg');
     if (existing) existing.remove();
     const msg = document.createElement('div');
     msg.className = 'form-success-msg' + (isError ? ' form-error-msg' : '');
     msg.textContent = text || 'Message envoyé !';
-    form.parentElement.appendChild(msg);
+    form.appendChild(msg);
     setTimeout(() => msg.remove(), 3000);
 }
 
