@@ -112,6 +112,7 @@ if (leafRight || leafLeft || leafDetailsRight || compLeafParallax || storyLeafPa
     }, { passive: true });
 }
 
+
 // Underline highlight animation linked to scroll progress
 const underlines = document.querySelectorAll('.underline');
 if (underlines.length) {
@@ -160,10 +161,14 @@ if (underlines.length) {
     let ready = false;
     let currentFrame = 0;
 
+    // Detect base path from the stylesheet link (works regardless of URL structure)
+    const _styleLink = document.querySelector('link[rel="stylesheet"][href*="style.css"]');
+    const basePath = _styleLink ? _styleLink.getAttribute('href').replace('style.css', '') : '';
+    window.__siteBasePath = basePath;
+
     // Preload all frames
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
         const img = new Image();
-        const basePath = (window.location.pathname.match(/^\/(en|ko)\//) ? '../' : '');
         img.src = `${basePath}assets/images/bottle-frames/frame_${String(i - 1).padStart(4, '0')}.png`;
         img.onload = function () {
             loaded++;
@@ -438,6 +443,16 @@ if (revealPhoneBtn && phoneNumber) {
     });
 }
 
+// Reveal email on click
+const revealEmailBtn = document.getElementById('contact-reveal-email');
+const emailAddress = document.getElementById('contact-email-address');
+if (revealEmailBtn && emailAddress) {
+    revealEmailBtn.addEventListener('click', () => {
+        revealEmailBtn.style.display = 'none';
+        emailAddress.classList.remove('hidden');
+    });
+}
+
 // Pro popup phone reveal (mobile)
 const proPhoneBtn = document.getElementById('pro-popup-phone-btn');
 const proPhoneNumber = document.getElementById('pro-popup-phone-number');
@@ -490,7 +505,7 @@ if (proPopup) {
                 return;
             }
             const link = document.createElement('a');
-            link.href = 'assets/Holeo.pdf';
+            link.href = (window.__siteBasePath || '') + 'assets/Holeo.pdf';
             link.download = 'Holeo-Fiche-Technique.pdf';
             link.click();
         });
