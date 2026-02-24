@@ -529,16 +529,16 @@ if (proPopup) {
     }
 }
 
-// Cookie consent popup — shown once per language version
+// Cookie consent popup — hidden by default in HTML, shown only if not yet answered for this lang
 const cookiePopup = document.getElementById('cookie-popup');
 if (cookiePopup) {
     const currentLang = document.documentElement.lang || 'fr';
     const storedChoice = localStorage.getItem('holeo-cookies');
     const storedLang   = localStorage.getItem('holeo-cookies-lang');
 
-    // Hide immediately if user already answered for THIS language
-    if (storedChoice && storedLang === currentLang) {
-        cookiePopup.classList.add('hidden');
+    // Show only if user hasn't answered yet for THIS language
+    if (!storedChoice || storedLang !== currentLang) {
+        cookiePopup.classList.remove('hidden');
     }
 
     const acceptBtn = document.getElementById('cookie-accept');
