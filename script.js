@@ -345,41 +345,28 @@ if (compCard) {
 }
 
 
-// ── EmailJS config ──────────────────────────────────────────────────────────
-// 1. Créer un compte sur https://www.emailjs.com (gratuit, 200 mails/mois)
-// 2. Ajouter un service email (Gmail, Outlook…) → noter le Service ID
-// 3. Créer un template avec les variables : {{name}}, {{email}}, {{subject}}, {{message}}
-//    → noter le Template ID
-// 4. Account > API Keys → noter la Public Key
-// Remplacer les 3 valeurs ci-dessous :
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-
-// Init EmailJS
-if (typeof emailjs !== 'undefined') {
-    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-}
-
-// Utility: send form via EmailJS → contact@holeo.fr
-async function submitForm(formData, form, onSuccess) {
-    const submitBtn = form.querySelector('button[type="submit"], .btn');
-    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Envoi...'; }
-
+// Formulaires → mailto:contact@holeo.fr
+// Ouvre le client email du visiteur avec les données pré-remplies.
+function submitForm(formData, form, onSuccess) {
     const params = {};
     formData.forEach((value, key) => { params[key] = value; });
-    if (!params.subject) params.subject = 'Contact Holéo';
 
-    try {
-        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
-        form.reset();
-        showFormSuccess(form, 'Message envoyé !');
-        if (onSuccess) onSuccess();
-    } catch (err) {
-        console.error('EmailJS error:', err);
-        showFormSuccess(form, 'Erreur, réessayez.', true);
-    }
-    if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Envoyer'; }
+    const subject = params.subject || 'Contact Holéo';
+    const lines = [];
+    if (params.name)    lines.push(`Nom : ${params.name}`);
+    if (params.email)   lines.push(`Email : ${params.email}`);
+    if (params.company) lines.push(`Entreprise : ${params.company}`);
+    if (params.message) lines.push(`\nMessage :\n${params.message}`);
+
+    const mailtoLink = `mailto:contact@holeo.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
+
+    const a = document.createElement('a');
+    a.href = mailtoLink;
+    a.click();
+
+    form.reset();
+    showFormSuccess(form, 'Message envoyé !');
+    if (onSuccess) onSuccess();
 }
 
 // Utility: show success/error message after form submit
