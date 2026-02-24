@@ -345,38 +345,39 @@ if (compCard) {
 }
 
 
-// Form submissions → contact@holeo.fr via FormSubmit.co (no registration needed)
-// First submission triggers a one-time email to contact@holeo.fr to activate the endpoint.
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact@holeo.fr';
+// ── EmailJS config ──────────────────────────────────────────────────────────
+// 1. Créer un compte sur https://www.emailjs.com (gratuit, 200 mails/mois)
+// 2. Ajouter un service email (Gmail, Outlook…) → noter le Service ID
+// 3. Créer un template avec les variables : {{name}}, {{email}}, {{subject}}, {{message}}
+//    → noter le Template ID
+// 4. Account > API Keys → noter la Public Key
+// Remplacer les 3 valeurs ci-dessous :
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
 
-// Utility: send form via FormSubmit.co → contact@holeo.fr
+// Init EmailJS
+if (typeof emailjs !== 'undefined') {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+}
+
+// Utility: send form via EmailJS → contact@holeo.fr
 async function submitForm(formData, form, onSuccess) {
-    // Convert FormData to JSON for the AJAX endpoint
-    const payload = {};
-    formData.forEach((value, key) => { payload[key] = value; });
-    // Map 'subject' → '_subject' (FormSubmit.co convention)
-    if (payload.subject) { payload._subject = payload.subject; delete payload.subject; }
-    payload._replyto = payload.email || '';
-    payload._captcha = 'false';
-
     const submitBtn = form.querySelector('button[type="submit"], .btn');
     if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Envoi...'; }
+
+    const params = {};
+    formData.forEach((value, key) => { params[key] = value; });
+    if (!params.subject) params.subject = 'Contact Holéo';
+
     try {
-        const res = await fetch(FORM_ENDPOINT, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify(payload)
-        });
-        const data = await res.json();
-        if (data.success === 'true' || data.success === true) {
-            form.reset();
-            showFormSuccess(form, 'Message envoyé !');
-            if (onSuccess) onSuccess();
-        } else {
-            showFormSuccess(form, 'Erreur, réessayez.', true);
-        }
+        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
+        form.reset();
+        showFormSuccess(form, 'Message envoyé !');
+        if (onSuccess) onSuccess();
     } catch (err) {
-        showFormSuccess(form, 'Erreur réseau, réessayez.', true);
+        console.error('EmailJS error:', err);
+        showFormSuccess(form, 'Erreur, réessayez.', true);
     }
     if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Envoyer'; }
 }
