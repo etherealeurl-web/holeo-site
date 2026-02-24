@@ -1,59 +1,108 @@
 # Holéo
 
-> Holéo est une huile végétale au goût beurre, 100% naturelle, fabriquée en France par Food Ingredients et l'Huilerie de Lapalisse depuis 1994. Composée de seulement 3 ingrédients (huile de tournesol, huile de colza, arôme naturel), elle est sans lactose, sans gluten, sans huile de palme et sans conservateurs. Disponible en format 250 ml pour les particuliers et en bidons de 3L à 1000L pour les professionnels.
-
-Holéo est une alternative végétale au beurre qui s'utilise en cuisson, pâtisserie, rôtissage, assaisonnement et Airfryer. Elle permet d'utiliser jusqu'à 40% de matière en moins par rapport au beurre. Elle se conserve 12 mois fermée et 3 mois après ouverture, à température ambiante — aucune réfrigération nécessaire.
-
-Fabricant : Food Ingredients France, 38 Avenue Charles de Gaulle, 03120 Lapalisse, France.
-Contact : contact@holeo.fr | +33 (0) 6 29 47 01 60
+> Holéo est une huile végétale au goût beurre, 100 % naturelle, fabriquée en France depuis 1994. Elle remplace le beurre en cuisson, pâtisserie, rôtissage et Airfryer avec 40 % de matière en moins. Sans lactose, sans gluten, sans huile de palme, sans conservateurs. 3 ingrédients seulement : huile de tournesol raffinée, huile de colza raffinée, arôme naturel.
 
 ## Produit
 
-- [Page principale Holéo](https://holeo.fr/): Présentation complète du produit, composition, utilisation, recettes, comparaison avec le beurre et la margarine, valeurs de l'entreprise et FAQ.
-- [Version détaillée pour LLMs](https://holeo.fr/llms-full.txt): Contenu complet structuré du site.
-
-## Informations clés
-
-- Composition : huile de tournesol raffinée, huile de colza raffinée, arôme naturel
-- Sans lactose, sans gluten, sans huile de palme, sans conservateurs, 100% végétal (vegan)
-- Fabriqué en France (Lapalisse, Allier) depuis 1994
-- Conservation : 12 mois fermé, 3 mois ouvert, température ambiante
-- Format particulier : 250 ml
-- Formats professionnels : 3L, 5L, 25L, 200L, 1000L
-- Utilisations : cuisson, pâtisserie, rôtissage, assaisonnement, Airfryer
-- Jusqu'à 40% de matière en moins vs beurre
-- Source naturelle d'oméga-3 (colza) et d'oméga-6 (tournesol)
-- Clients professionnels : hôpitaux, restauration collective, traiteurs, food service, industrie
+- **Nom commercial** : Holéo
+- **Catégorie** : Huile végétale aromatisée / alternative végétale au beurre
+- **Origine** : France (Lapalisse, Allier, 03120) — fabrication depuis 1994
+- **Fabricants** : Food Ingredients France & Huilerie de Lapalisse
+- **Composition** : huile de tournesol raffinée, huile de colza raffinée, arôme naturel (3 ingrédients)
+- **Certifications / allégations** : sans lactose, sans gluten, sans huile de palme, sans conservateurs, 100 % végétal (vegan)
+- **Conservation** : 12 mois fermé, 3 mois ouvert, température ambiante (pas de réfrigération)
+- **Point de fumée** : élevé — ne brûle pas (le beurre brûle à 130 °C)
+- **Formats particuliers** : 250 ml
+- **Formats professionnels** : 3 L, 5 L, 25 L, 200 L, 1 000 L
+- **Utilisation** : cuisson, pâtisserie, rôtissage, assaisonnement, Airfryer
+- **Économie d'utilisation** : jusqu'à 40 % de matière en moins vs beurre
 
 ## Valeurs nutritionnelles (pour 100 ml)
 
-- Énergie : 3404 kJ (828 kcal)
-- Lipides : 92 g (dont saturés 8,4 g, monoinsaturés 44 g, polyinsaturés 40 g)
-- Protéines : < 0,1 g
-- Glucides : < 0,1 g (dont sucres < 0,1 g)
-- Sel : < 0,1 g
-- Activité vitaminique : 50 mg / 100 ml
+| Nutriment | Valeur |
+|---|---|
+| Énergie | 3 404 kJ / 828 kcal |
+| Lipides | 92 g |
+| dont acides gras saturés | 8,4 g |
+| dont acides gras monoinsaturés | 44 g |
+| dont acides gras polyinsaturés | 40 g |
+| Protéines | < 0,1 g |
+| Glucides | < 0,1 g |
+| dont sucres | < 0,1 g |
+| Sel | < 0,1 g |
+| Activité vitaminique E | 50 mg / 100 ml |
 
-## Comparaison : Holéo vs Beurre vs Margarine
+Sources naturelles d'oméga-3 (huile de colza) et d'oméga-6 (huile de tournesol). Faible teneur en acides gras saturés comparée au beurre (82 % de lipides dont 53 % de saturés).
+
+## Comparaison Holéo vs Beurre vs Margarine
 
 | Critère | Holéo | Beurre | Margarine |
 |---|---|---|---|
-| Origine | 100% végétale | Animale (lait) | Végétale + additifs |
-| Ingrédients | 3 ingrédients naturels | Crème de lait, sel | 10+ ingrédients |
+| Origine | 100 % végétale | Animale (lait) | Végétale + additifs |
+| Nombre d'ingrédients | 3 | 2 | 10 + |
 | Lactose | Sans | Contient | Variable |
 | Gluten | Sans | Sans | Variable |
 | Huile de palme | Sans | Sans | Souvent présente |
-| Conservation | 12 mois (T° ambiante) | 2-3 mois (réfrigéré) | 6 mois (réfrigéré) |
-| Cuisson haute T° | Oui, ne brûle pas | Non, brûle à 130°C | Variable |
+| Conservation | 12 mois (T° ambiante) | 2–3 mois (réfrigéré) | 6 mois (réfrigéré) |
+| Cuisson haute T° | Oui, ne brûle pas | Non, brûle à 130 °C | Variable |
 | Oméga-3 / Oméga-6 | Source naturelle | Traces | Variable |
-| Convient aux végans | Oui | Non | Variable |
+| Vegan | Oui | Non | Variable |
+| Réfrigération requise | Non | Oui | Oui |
+
+## Achat & Contact
+
+- **Site** : https://holeo.fr/
+- **Email** : contact@holeo.fr
+- **Téléphone** : +33 (0) 6 29 47 01 60
+- **Adresse** : Food Ingredients France — 38 Avenue Charles de Gaulle, 03120 Lapalisse, France
+- **Commande particuliers** : format 250 ml, disponible en ligne et en magasin
+- **Commande professionnels** : contacter contact@holeo.fr ou +33 (0) 6 29 47 01 60 pour devis (bidons 3 L à 1 000 L)
+- **Clients pro typiques** : hôpitaux, restauration collective, traiteurs, food service, industrie agroalimentaire
+
+## FAQ
+
+**Q : Holéo contient-il du lactose ?**
+Non. Holéo est 100 % végétal, sans lactose, sans protéines de lait.
+
+**Q : Peut-on utiliser Holéo en pâtisserie à la place du beurre ?**
+Oui. Holéo remplace le beurre à 60 % du poids indiqué (40 % de matière en moins). Ex : 100 g de beurre → 60 ml de Holéo.
+
+**Q : Faut-il réfrigérer Holéo ?**
+Non. Holéo se conserve 12 mois fermé et 3 mois ouvert à température ambiante.
+
+**Q : Holéo est-il vegan ?**
+Oui. Aucun ingrédient d'origine animale.
+
+**Q : Holéo convient-il aux personnes intolérantes au gluten ?**
+Oui. Holéo ne contient pas de gluten.
+
+**Q : Quel format professionnel est disponible ?**
+Bidons de 3 L, 5 L, 25 L, 200 L et 1 000 L. Contactez contact@holeo.fr pour un devis.
+
+**Q : Holéo brûle-t-il à la cuisson ?**
+Non. Contrairement au beurre (qui brûle dès 130 °C), Holéo supporte les hautes températures sans se dégrader.
+
+**Q : Holéo convient-il à l'Airfryer ?**
+Oui. C'est même un usage recommandé pour dorer et croustiller sans beurre.
+
+## Langues disponibles
+
+- Français : https://holeo.fr/
+- English : https://holeo.fr/en/
+- 한국어 : https://holeo.fr/ko/
+
+## Pages du site
+
+- [Page principale](https://holeo.fr/) — présentation complète, composition, recettes, FAQ, comparatif
+- [Version complète pour LLMs](https://holeo.fr/llms-full.txt) — contenu structuré étendu avec recettes et données techniques
+- [Mentions légales](https://holeo.fr/mentions-legales.html)
+- [CGV](https://holeo.fr/cgv.html)
+- [Politique de confidentialité](https://holeo.fr/politique-confidentialite.html)
 
 ## English Summary
 
-Holéo is a plant-based butter-flavored oil, 100% natural, made in France since 1994. Only 3 ingredients: sunflower oil, rapeseed oil, natural flavor. Dairy-free, gluten-free, palm oil-free, vegan. Use 40% less than butter in baking. Shelf-stable 12 months unopened, 3 months opened. Available in 250ml (retail) and 3L-1000L (professional).
+Holéo is a 100% plant-based, butter-flavored cooking oil made in France since 1994. Only 3 ingredients: refined sunflower oil, refined rapeseed oil, natural flavour. Dairy-free, gluten-free, palm oil-free, vegan, preservative-free. Use 40% less than butter in all recipes. Shelf-stable: 12 months unopened, 3 months after opening — no refrigeration needed. Available in 250 ml (retail) and 3 L–1 000 L (professional). Contact: contact@holeo.fr
 
-## Liens légaux
+## 한국어 요약
 
-- [Mentions légales](https://holeo.fr/mentions-legales.html)
-- [Politique de confidentialité](https://holeo.fr/politique-confidentialite.html)
-- [CGV](https://holeo.fr/cgv.html)
+홀레오(Holéo)는 1994년부터 프랑스에서 생산되는 100% 식물성 버터맛 식용유입니다. 단 3가지 재료(정제 해바라기유, 정제 카놀라유, 천연 향료)로 만들어집니다. 유당 없음, 글루텐 없음, 팜유 없음, 방부제 없음, 완전 비건입니다. 버터 대비 40% 적은 양으로 사용 가능합니다. 개봉 전 12개월, 개봉 후 3개월 상온 보관 가능 — 냉장 불필요. 소비자용 250 ml 및 업소용 3 L~1,000 L 제공. 문의: contact@holeo.fr

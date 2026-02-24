@@ -345,22 +345,30 @@ if (compCard) {
 }
 
 
-// Web3Forms API key — replace with your real key from https://web3forms.com
-const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE';
+// Form submissions → contact@holeo.fr via FormSubmit.co (no registration needed)
+// First submission triggers a one-time email to contact@holeo.fr to activate the endpoint.
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/contact@holeo.fr';
 
-// Utility: send form via Web3Forms
+// Utility: send form via FormSubmit.co → contact@holeo.fr
 async function submitForm(formData, form, onSuccess) {
-    formData.append('access_key', WEB3FORMS_KEY);
-    formData.append('from_name', 'Holéo Site');
+    // Convert FormData to JSON for the AJAX endpoint
+    const payload = {};
+    formData.forEach((value, key) => { payload[key] = value; });
+    // Map 'subject' → '_subject' (FormSubmit.co convention)
+    if (payload.subject) { payload._subject = payload.subject; delete payload.subject; }
+    payload._replyto = payload.email || '';
+    payload._captcha = 'false';
+
     const submitBtn = form.querySelector('button[type="submit"], .btn');
     if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Envoi...'; }
     try {
-        const res = await fetch('https://api.web3forms.com/submit', {
+        const res = await fetch(FORM_ENDPOINT, {
             method: 'POST',
-            body: formData
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
         });
         const data = await res.json();
-        if (data.success) {
+        if (data.success === 'true' || data.success === true) {
             form.reset();
             showFormSuccess(form, 'Message envoyé !');
             if (onSuccess) onSuccess();
@@ -521,14 +529,24 @@ if (proPopup) {
     }
 }
 
-// Cookie consent popup (always shown on every page load)
+// Cookie consent popup — shown once per language version
 const cookiePopup = document.getElementById('cookie-popup');
 if (cookiePopup) {
+    const currentLang = document.documentElement.lang || 'fr';
+    const storedChoice = localStorage.getItem('holeo-cookies');
+    const storedLang   = localStorage.getItem('holeo-cookies-lang');
+
+    // Hide immediately if user already answered for THIS language
+    if (storedChoice && storedLang === currentLang) {
+        cookiePopup.classList.add('hidden');
+    }
+
     const acceptBtn = document.getElementById('cookie-accept');
     const refuseBtn = document.getElementById('cookie-refuse');
 
     function closeCookiePopup(choice) {
         localStorage.setItem('holeo-cookies', choice);
+        localStorage.setItem('holeo-cookies-lang', currentLang);
         cookiePopup.classList.add('hidden');
         setTimeout(() => cookiePopup.remove(), 400);
     }

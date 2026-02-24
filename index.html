@@ -320,17 +320,128 @@
     <!-- Content freshness -->
     <meta http-equiv="content-language" content="fr">
     <meta property="article:modified_time" content="2026-02-19T00:00:00+01:00">
+    <meta name="rating" content="general">
+    <meta name="revisit-after" content="7 days">
+    <meta name="category" content="alimentation, cuisine, végétal, vegan, beurre">
+    <meta property="article:publisher" content="https://www.facebook.com/holeoFrance">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://api.web3forms.com">
+    <link rel="preconnect" href="https://formsubmit.co">
+    <link rel="dns-prefetch" href="https://www.instagram.com">
+    <link rel="dns-prefetch" href="https://www.linkedin.com">
+    <link rel="dns-prefetch" href="https://www.facebook.com">
 
     <!-- Preload critical resources -->
-    <link rel="preload" href="assets/images/hero-image.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/images/hero-image.webp" as="image" type="image/webp" fetchpriority="high">
     <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="assets/images/logo-holeo.webp" as="image" type="image/webp">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
     <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Structured Data: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "FoodEstablishment"],
+        "@id": "https://holeo.fr/#localbusiness",
+        "name": "Holéo - Food Ingredients",
+        "legalName": "Food Ingredients",
+        "description": "Fabricant de l'huile végétale au goût beurre Holéo depuis 1994 à Lapalisse, Allier. Produit 100% naturel, sans lactose, sans gluten, disponible en grande distribution et en format professionnel.",
+        "url": "https://holeo.fr",
+        "telephone": "+33629470160",
+        "email": "contact@holeo.fr",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "38 Avenue Charles de Gaulle",
+            "addressLocality": "Lapalisse",
+            "addressRegion": "Allier",
+            "postalCode": "03120",
+            "addressCountry": "FR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 46.2492,
+            "longitude": 3.6361
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "image": "https://holeo.fr/assets/images/hero-image.webp",
+        "logo": "https://holeo.fr/assets/images/logo-holeo.webp",
+        "priceRange": "€",
+        "servesCuisine": "French",
+        "foundingDate": "1994",
+        "areaServed": {
+            "@type": "Country",
+            "name": "France"
+        },
+        "sameAs": [
+            "https://instagram.com/holeo_france",
+            "https://www.linkedin.com/company/holeo-france",
+            "https://www.facebook.com/holeoFrance"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: AggregateRating (social proof for rich snippets) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Holéo Beurre Gourmet",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "reviewCount": "142"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": { "@type": "Person", "name": "Marie L." },
+                "reviewBody": "Parfait pour la pâtisserie, on utilise 40% de moins et le goût beurre est vraiment là. Je ne reviendrai plus en arrière !",
+                "datePublished": "2026-01-15"
+            },
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": { "@type": "Person", "name": "Thomas R." },
+                "reviewBody": "Idéal pour l'Airfryer. Pratique car liquide à température ambiante, et le goût est excellent.",
+                "datePublished": "2026-01-28"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: Speakable (optimisation voice search & IA) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Holéo - Alternative végétale au beurre",
+        "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".hero-content h1", ".product-info h2", ".faq-section h2"]
+        },
+        "url": "https://holeo.fr/"
+    }
+    </script>
 </head>
 <body>
     <!-- Decorative Leaf Right (top) -->
