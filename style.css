@@ -1651,6 +1651,7 @@ img {
     align-items: center;
 }
 
+
 .company-circle {
     position: relative;
     width: 380px;
@@ -2569,7 +2570,6 @@ img {
     height: 28px;
     width: auto;
     margin-bottom: 16px;
-    filter: brightness(0) invert(1);
 }
 
 .footer-brand p {
