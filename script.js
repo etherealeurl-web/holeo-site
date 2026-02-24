@@ -169,7 +169,7 @@ if (underlines.length) {
     // Preload all frames
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
         const img = new Image();
-        img.src = `${basePath}assets/images/bottle-frames/frame_${String(i - 1).padStart(4, '0')}.png`;
+        img.src = `${basePath}assets/images/bottle-frames/frame_${String(i - 1).padStart(4, '0')}.webp`;
         img.onload = function () {
             loaded++;
             if (loaded === TOTAL_FRAMES) {
