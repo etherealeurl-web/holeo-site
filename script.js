@@ -345,28 +345,30 @@ if (compCard) {
 }
 
 
-// Formulaires → mailto:contact@holeo.fr
-// Ouvre le client email du visiteur avec les données pré-remplies.
-function submitForm(formData, form, onSuccess) {
-    const params = {};
-    formData.forEach((value, key) => { params[key] = value; });
+// Formulaires → contact@holeo.fr via Web3Forms
+const WEB3FORMS_KEY = '8426187f254c27f9568b2adb1011b784';
 
-    const subject = params.subject || 'Contact Holéo';
-    const lines = [];
-    if (params.name)    lines.push(`Nom : ${params.name}`);
-    if (params.email)   lines.push(`Email : ${params.email}`);
-    if (params.company) lines.push(`Entreprise : ${params.company}`);
-    if (params.message) lines.push(`\nMessage :\n${params.message}`);
-
-    const mailtoLink = `mailto:contact@holeo.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join('\n'))}`;
-
-    const a = document.createElement('a');
-    a.href = mailtoLink;
-    a.click();
-
-    form.reset();
-    showFormSuccess(form, 'Message envoyé !');
-    if (onSuccess) onSuccess();
+async function submitForm(formData, form, onSuccess) {
+    formData.append('access_key', WEB3FORMS_KEY);
+    const submitBtn = form.querySelector('button[type="submit"], .btn');
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Envoi...'; }
+    try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        });
+        const data = await res.json();
+        if (data.success) {
+            form.reset();
+            showFormSuccess(form, 'Message envoyé !');
+            if (onSuccess) onSuccess();
+        } else {
+            showFormSuccess(form, 'Erreur, réessayez.', true);
+        }
+    } catch (err) {
+        showFormSuccess(form, 'Erreur réseau, réessayez.', true);
+    }
+    if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Envoyer'; }
 }
 
 // Utility: show success/error message after form submit
