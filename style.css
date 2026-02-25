@@ -3587,6 +3587,7 @@ img {
         align-items: stretch;
         gap: 12px;
         margin-bottom: 20px;
+        overflow: hidden;
     }
 
     .articles-filters {
