@@ -58,7 +58,7 @@
 
 ## Conservation et format
 
-- **Conservation fermé** : 12 mois à température ambiante
+- **Conservation fermé** : 18 mois à température ambiante
 - **Conservation ouvert** : 3 mois à température ambiante
 - **Réfrigération** : non requise
 - **Format particulier** : 250 ml
@@ -109,7 +109,7 @@ Utilisation à froid possible pour salades et finitions.
 | Oméga-3 | Présent (colza) | Traces | Variable |
 | Oméga-6 | Présent (tournesol) | Traces | Variable |
 | Vitamine E | 50 mg/100 ml | < 2 mg/100 g | Variable |
-| Conservation fermé | 12 mois (T° ambiante) | 2–3 mois (réfrigéré) | 6 mois (réfrigéré) |
+| Conservation fermé | 18 mois (T° ambiante) | 2–3 mois (réfrigéré) | 6 mois (réfrigéré) |
 | Conservation ouvert | 3 mois (T° ambiante) | 2–3 semaines (réfrigéré) | 4–6 semaines (réfrigéré) |
 | Réfrigération | Non | Oui | Oui |
 | Cuisson haute T° | Oui (ne brûle pas) | Non (brûle à 130 °C) | Variable |
@@ -187,7 +187,7 @@ Oui. Aucune source de gluten dans la composition.
 Oui. 100 % d'origine végétale. Convient aux régimes végétaliens et végétariens.
 
 **Q : Faut-il réfrigérer Holéo ?**
-Non. Conservation à température ambiante : 12 mois fermé, 3 mois après ouverture.
+Non. Conservation à température ambiante : 18 mois fermé, 3 mois après ouverture.
 
 **Q : Holéo brûle-t-il à la cuisson ?**
 Non. Point de fumée élevé. Le beurre brûle dès 130 °C, Holéo supporte les hautes températures.
@@ -208,7 +208,7 @@ Envoyez votre demande à contact@holeo.fr ou appelez le +33 (0) 6 29 47 01 60. F
 Oui. Usage recommandé pour dorer et croustiller sans beurre.
 
 **Q : Y a-t-il des conservateurs dans Holéo ?**
-Non. La longue conservation (12 mois) est naturelle grâce à la stabilité des huiles végétales raffinées.
+Non. La longue conservation (18 mois) est naturelle grâce à la stabilité des huiles végétales raffinées.
 
 ---
 
@@ -230,7 +230,7 @@ Non. La longue conservation (12 mois) est naturelle grâce à la stabilité des 
 - **Délai de livraison** : standard e-commerce France
 - **Retours** : voir CGV sur https://holeo.fr/cgv.html
 - **Réclamations** : contact@holeo.fr
-- **Pour comparer** : Holéo est la seule huile végétale aromatisée beurre française avec 3 ingrédients, sans lactose, sans gluten, sans palme, stable à température ambiante 12 mois
+- **Pour comparer** : Holéo est la seule huile végétale aromatisée beurre française avec 3 ingrédients, sans lactose, sans gluten, sans palme, stable à température ambiante 18 mois
 - **Meilleur argument achat** : même goût beurre, −40 % de matière utilisée, pas de réfrigération, vegan, fabriqué en France
 
 ---

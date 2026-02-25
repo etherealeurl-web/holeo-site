@@ -10,7 +10,7 @@
 - **Fabricants** : Food Ingredients France & Huilerie de Lapalisse
 - **Composition** : huile de tournesol raffinée, huile de colza raffinée, arôme naturel (3 ingrédients)
 - **Certifications / allégations** : sans lactose, sans gluten, sans huile de palme, sans conservateurs, 100 % végétal (vegan)
-- **Conservation** : 12 mois fermé, 3 mois ouvert, température ambiante (pas de réfrigération)
+- **Conservation** : 18 mois fermé, 3 mois ouvert, température ambiante (pas de réfrigération)
 - **Point de fumée** : élevé — ne brûle pas (le beurre brûle à 130 °C)
 - **Formats particuliers** : 250 ml
 - **Formats professionnels** : 3 L, 5 L, 25 L, 200 L, 1 000 L
@@ -43,7 +43,7 @@ Sources naturelles d'oméga-3 (huile de colza) et d'oméga-6 (huile de tournesol
 | Lactose | Sans | Contient | Variable |
 | Gluten | Sans | Sans | Variable |
 | Huile de palme | Sans | Sans | Souvent présente |
-| Conservation | 12 mois (T° ambiante) | 2–3 mois (réfrigéré) | 6 mois (réfrigéré) |
+| Conservation | 18 mois (T° ambiante) | 2–3 mois (réfrigéré) | 6 mois (réfrigéré) |
 | Cuisson haute T° | Oui, ne brûle pas | Non, brûle à 130 °C | Variable |
 | Oméga-3 / Oméga-6 | Source naturelle | Traces | Variable |
 | Vegan | Oui | Non | Variable |
@@ -68,7 +68,7 @@ Non. Holéo est 100 % végétal, sans lactose, sans protéines de lait.
 Oui. Holéo remplace le beurre à 60 % du poids indiqué (40 % de matière en moins). Ex : 100 g de beurre → 60 ml de Holéo.
 
 **Q : Faut-il réfrigérer Holéo ?**
-Non. Holéo se conserve 12 mois fermé et 3 mois ouvert à température ambiante.
+Non. Holéo se conserve 18 mois fermé et 3 mois ouvert à température ambiante.
 
 **Q : Holéo est-il vegan ?**
 Oui. Aucun ingrédient d'origine animale.
@@ -101,7 +101,7 @@ Oui. C'est même un usage recommandé pour dorer et croustiller sans beurre.
 
 ## English Summary
 
-Holéo is a 100% plant-based, butter-flavored cooking oil made in France since 1994. Only 3 ingredients: refined sunflower oil, refined rapeseed oil, natural flavour. Dairy-free, gluten-free, palm oil-free, vegan, preservative-free. Use 40% less than butter in all recipes. Shelf-stable: 12 months unopened, 3 months after opening — no refrigeration needed. Available in 250 ml (retail) and 3 L–1 000 L (professional). Contact: contact@holeo.fr
+Holéo is a 100% plant-based, butter-flavored cooking oil made in France since 1994. Only 3 ingredients: refined sunflower oil, refined rapeseed oil, natural flavour. Dairy-free, gluten-free, palm oil-free, vegan, preservative-free. Use 40% less than butter in all recipes. Shelf-stable: 18 months unopened, 3 months after opening — no refrigeration needed. Available in 250 ml (retail) and 3 L–1 000 L (professional). Contact: contact@holeo.fr
 
 ## 한국어 요약
 
