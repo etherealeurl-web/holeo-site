@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="theme-color" content="#FFFDF4">
+    <meta name="robots" content="index, follow">
+    <title>Holéo Pro – L'alternative au beurre pour les professionnels</title>
+    <meta name="description" content="Holéo Pro : l'huile végétale au goût beurre pour les professionnels de la restauration. Demandez un échantillon ou téléchargez la fiche technique.">
+    <link rel="icon" type="image/png" href="assets/images/favicon-heart.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="canonical" href="https://holeo.fr/pro.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #FFFDF4;
+            color: #14181E;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; height: auto; }
+
+        /* ── Back nav ── */
+        .pro-topbar {
+            position: absolute; top: 0; left: 0; right: 0; z-index: 10;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 20px 40px;
+        }
+        .pro-topbar-back {
+            display: flex; align-items: center; gap: 8px;
+            color: #1a1a1a; text-decoration: none;
+            font-weight: 600; font-size: 0.9rem;
+            opacity: 0.85; transition: opacity .2s;
+        }
+        .pro-topbar-back:hover { opacity: 1; }
+        .pro-topbar-back svg { width: 20px; height: 20px; }
+        .pro-topbar-logo {
+            height: 36px;
+            filter: brightness(0);
+            opacity: 0.9;
+        }
+
+        /* ════════════════════════════
+           HERO — Amphora style
+           ════════════════════════════ */
+        .pro-hero {
+            background: #FFFDF4;
+            position: relative;
+            overflow: hidden;
+        }
+        .pro-hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 60px 60px;
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* LEFT — Bottle visual with decorative circle */
+        .pro-hero-visual {
+            flex-shrink: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 420px;
+        }
+        .pro-hero-visual::before {
+            display: none;
+        }
+        .pro-bottle-canvas {
+            width: 200px;
+            height: auto;
+            aspect-ratio: 500 / 1244;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+        .pro-bottle-fallback {
+            width: 200px;
+            height: auto;
+            position: relative;
+            z-index: 1;
+        }
+        .pro-hero-formats {
+            margin-top: 24px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .pro-hero-formats-label {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        .pro-hero-formats-badges {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .pro-format-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #F6CE1A;
+            color: #1a1a1a;
+            font-weight: 800;
+            font-size: 0.95rem;
+            padding: 8px 18px;
+            border-radius: 8px;
+            min-width: 48px;
+        }
+
+        /* RIGHT — Text content */
+        .pro-hero-text {
+            flex: 1;
+            color: #1a1a1a;
+        }
+        .pro-hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .pro-hero-badge-logo {
+            height: 48px;
+            filter: brightness(0);
+        }
+        .pro-hero-badge-label {
+            background: #3B7D23;
+            color: #fff;
+            font-weight: 800;
+            font-size: 0.85rem;
+            padding: 5px 16px;
+            border-radius: 100px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .pro-hero h1 {
+            font-size: 2.4rem;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 8px;
+            max-width: 500px;
+            color: #F6CE1A;
+        }
+        .pro-hero-subtitle {
+            font-size: 1.15rem;
+            font-weight: 700;
+            font-style: italic;
+            color: #14181E;
+            margin-bottom: 28px;
+            max-width: 460px;
+        }
+        .pro-hero-benefits {
+            list-style: none;
+            margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 520px;
+        }
+        .pro-hero-benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #333;
+        }
+        .pro-hero-benefits li::before {
+            content: '+';
+            flex-shrink: 0;
+            width: 30px; height: 30px;
+            background: #F6CE1A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1a1a1a;
+            font-weight: 400;
+            font-size: 1.5rem;
+            margin-top: -1px;
+        }
+
+        /* Ingredients & Nutrition inline */
+        .pro-hero-ingredients {
+            margin-bottom: 20px;
+        }
+        .pro-hero-ingredients h3 {
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .pro-hero-ingredients p {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        .pro-hero-nutri-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #14181E;
+            text-decoration: none;
+            margin-bottom: 28px;
+            transition: color .2s;
+        }
+        .pro-hero-nutri-link:hover { color: #c9a510; }
+        .pro-hero-nutri-link svg { width: 18px; height: 18px; color: #3B7D23; }
+
+        /* CTAs — Amphora style yellow buttons */
+        .pro-hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .pro-hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #F6CE1A;
+            color: #1a1a1a;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800;
+            font-size: 0.88rem;
+            padding: 14px 28px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background .2s, transform .2s;
+        }
+        .pro-hero-cta:hover {
+            background: #e5be10;
+            transform: translateY(-1px);
+        }
+        .pro-hero-cta svg { width: 18px; height: 18px; }
+
+        /* ════════════════════════════
+           FEATURES STRIP
+           ════════════════════════════ */
+        .pro-features {
+            background: #fff;
+            border-top: 1px solid #f0ece0;
+            border-bottom: 1px solid #f0ece0;
+            position: relative;
+            z-index: 2;
+        }
+        .pro-features-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .pro-feature-item {
+            padding: 36px 24px;
+            text-align: center;
+        }
+        .pro-feature-icon {
+            width: 44px; height: 44px;
+            margin: 0 auto 12px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .pro-feature-icon svg { width: 28px; height: 28px; color: #14181E; }
+        .pro-feature-value {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #14181E;
+            margin-bottom: 4px;
+            letter-spacing: -0.02em;
+        }
+        .pro-feature-label {
+            font-size: 0.8rem;
+            color: #999;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ════════════════════════════
+           USAGES SECTION
+           ════════════════════════════ */
+        .pro-usages {
+            background: #f3efe3;
+            padding: 90px 40px;
+        }
+        .pro-usages-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .pro-usages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .pro-usage-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px 24px;
+            text-align: center;
+            transition: transform .3s;
+        }
+        .pro-usage-card:hover {
+            transform: translateY(-3px);
+        }
+        .pro-usage-icon {
+            width: 120px; height: 120px;
+            margin: 0 auto 16px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .pro-usage-icon svg {
+            width: 48px; height: 48px;
+            color: #14181E;
+            stroke-width: 1.5;
+        }
+        .pro-usage-card h3 {
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #14181E;
+            margin-bottom: 6px;
+        }
+        .pro-usage-card p {
+            font-size: 0.82rem;
+            color: #999;
+            line-height: 1.6;
+        }
+
+        /* ════════════════════════════
+           COMPOSITION SECTION
+           ════════════════════════════ */
+        .pro-composition {
+            padding: 70px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .pro-compo-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 44px 52px;
+            display: flex;
+            align-items: flex-start;
+            gap: 48px;
+            box-shadow: 0 2px 16px rgba(0,0,0,.03);
+        }
+        .pro-compo-block {
+            flex: 1;
+        }
+        .pro-compo-block h3 {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #14181E;
+            margin-bottom: 12px;
+        }
+        .pro-compo-block p {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        .pro-compo-divider {
+            width: 1px;
+            align-self: stretch;
+            background: #ece8dd;
+            flex-shrink: 0;
+        }
+        .pro-nutri-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 24px;
+        }
+        .pro-nutri-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.88rem;
+            color: #555;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(0,0,0,.04);
+        }
+        .pro-nutri-item span:last-child {
+            font-weight: 700;
+            color: #14181E;
+        }
+
+        /* ════════════════════════════
+           FORMATS SECTION
+           ════════════════════════════ */
+        .pro-formats {
+            padding: 90px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .pro-section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .pro-section-tag {
+            display: inline-block;
+            color: #999;
+            font-weight: 700;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+        .pro-section-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: #14181E;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        .pro-formats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .pro-format-card {
+            background: #f3efe3;
+            border-radius: 16px;
+            padding: 36px 20px;
+            text-align: center;
+            transition: transform .3s, background .3s;
+        }
+        .pro-format-card:hover {
+            transform: translateY(-3px);
+            background: #eae5d5;
+        }
+        .pro-format-volume {
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: #14181E;
+            line-height: 1;
+            margin-bottom: 8px;
+            letter-spacing: -0.03em;
+        }
+        .pro-format-type {
+            font-size: 0.82rem;
+            color: #999;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ════════════════════════════
+           CLIENTS + CTA SECTION
+           ════════════════════════════ */
+        .pro-trust {
+            background: #14181E;
+            padding: 90px 40px;
+        }
+        .pro-trust-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .pro-trust .pro-section-tag { color: rgba(255,255,255,0.4); }
+        .pro-trust .pro-section-title { color: #fff; }
+        .pro-trust-left {}
+        .pro-trust-clients {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+        }
+        .pro-trust-clients li {
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.75);
+            transition: background .2s, border-color .2s;
+        }
+        .pro-trust-clients li:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.25);
+        }
+        .pro-trust-right {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+        }
+        .pro-form-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #14181E;
+            margin-bottom: 6px;
+        }
+        .pro-form-subtitle {
+            font-size: 0.82rem;
+            color: #999;
+            margin-bottom: 24px;
+        }
+        .pro-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .pro-form input,
+        .pro-form textarea {
+            padding: 14px 18px;
+            border: 1.5px solid #e8e3d5;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: #14181E;
+            background: #FFFDF4;
+            transition: border-color .2s, box-shadow .2s;
+        }
+        .pro-form input:focus,
+        .pro-form textarea:focus {
+            outline: none;
+            border-color: #F6CE1A;
+            box-shadow: 0 0 0 3px rgba(246,206,26,.12);
+        }
+        .pro-form textarea { resize: vertical; min-height: 100px; }
+        .pro-form-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            background: #F6CE1A;
+            color: #1a1a1a;
+            font-family: 'Raleway', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 800;
+            padding: 16px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background .2s, transform .2s;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .pro-form-btn:hover { background: #e5be10; transform: translateY(-1px); }
+
+        /* ════════════════════════════
+           DOWNLOAD SECTION
+           ════════════════════════════ */
+        .pro-download {
+            padding: 60px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .pro-download-card {
+            background: #f3efe3;
+            border-radius: 20px;
+            padding: 52px 60px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            color: #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+        .pro-download-text {
+            flex: 1;
+            position: relative;
+            z-index: 1;
+        }
+        .pro-download-text h3 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+        .pro-download-text p {
+            font-size: 0.92rem;
+            opacity: 0.6;
+            line-height: 1.6;
+        }
+        .pro-download-form {
+            flex-shrink: 0;
+            display: flex;
+            gap: 12px;
+            position: relative;
+            z-index: 1;
+        }
+        .pro-download-form input {
+            padding: 14px 20px;
+            border: 1.5px solid rgba(0,0,0,0.1);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.9rem;
+            background: #fff;
+            color: #1a1a1a;
+            width: 260px;
+            transition: border-color .2s, box-shadow .2s;
+        }
+        .pro-download-form input::placeholder { color: rgba(0,0,0,0.35); }
+        .pro-download-form input:focus {
+            outline: none;
+            border-color: #F6CE1A;
+            box-shadow: 0 0 0 3px rgba(246,206,26,.12);
+        }
+        .pro-download-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #F6CE1A;
+            color: #1a1a1a;
+            font-family: 'Raleway', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 800;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background .2s, transform .2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .pro-download-btn:hover {
+            background: #e5be10;
+            transform: translateY(-1px);
+        }
+        .pro-download-btn svg { width: 18px; height: 18px; }
+
+        /* ════════════════════════════
+           CONTACT FOOTER
+           ════════════════════════════ */
+        .pro-footer {
+            padding: 44px 40px;
+            text-align: center;
+            border-top: 1px solid rgba(0,0,0,.06);
+        }
+        .pro-footer-inner {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .pro-footer-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            color: #999;
+        }
+        .pro-footer-item a {
+            color: #14181E;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .pro-footer-item a:hover { text-decoration: underline; }
+        .pro-footer-item svg { color: #999; flex-shrink: 0; }
+
+        /* ════════════════════════════
+           DISTRIBUTEURS
+           ════════════════════════════ */
+        .pro-distributors {
+            padding: 60px 40px;
+            background: #FFFDF4;
+        }
+        .pro-distributors-grid {
+            max-width: 900px;
+            margin: 40px auto 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .pro-distributor-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 36px;
+            background: #fff;
+            border: 1.5px solid rgba(0,0,0,0.07);
+            border-radius: 16px;
+            transition: border-color .2s, box-shadow .2s, transform .2s;
+            text-decoration: none;
+            min-width: 180px;
+            min-height: 90px;
+        }
+        .pro-distributor-link:hover {
+            border-color: #F6CE1A;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+            transform: translateY(-3px);
+        }
+        .pro-distributor-link img {
+            max-height: 48px;
+            max-width: 160px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.65;
+            transition: filter .2s, opacity .2s;
+        }
+        .pro-distributor-link:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* ── Success/error msg ── */
+        .form-success-msg {
+            text-align: center;
+            padding: 12px;
+            border-radius: 10px;
+            background: rgba(59,125,35,0.08);
+            color: #3B7D23;
+            font-size: 0.85rem;
+            font-weight: 600;
+            animation: fadeUp 0.3s ease;
+        }
+        .form-error-msg {
+            background: #fde8e8;
+            color: #c0392b;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile title (hidden on desktop) */
+        .pro-hero-mobile-title { display: none; }
+
+        /* ════════════════════════════
+           RESPONSIVE
+           ════════════════════════════ */
+        @media (max-width: 1024px) {
+            .pro-hero-inner { padding: 90px 40px 50px; gap: 50px; }
+            .pro-hero h1 { font-size: 2rem; }
+            .pro-hero-visual { width: 320px; }
+            .pro-hero-visual::before { width: 300px; height: 300px; }
+            .pro-bottle-canvas { width: 160px; }
+            .pro-bottle-fallback { width: 160px; }
+            .pro-features-inner { grid-template-columns: repeat(2, 1fr); }
+            .pro-usages-grid { grid-template-columns: repeat(2, 1fr); }
+            .pro-compo-card { flex-direction: column; gap: 32px; }
+            .pro-compo-divider { width: 100%; height: 1px; }
+            .pro-formats-grid { grid-template-columns: repeat(2, 1fr); }
+            .pro-trust-inner { grid-template-columns: 1fr; gap: 40px; }
+            .pro-download-card { flex-direction: column; text-align: center; padding: 40px; }
+            .pro-download-form { width: 100%; justify-content: center; }
+        }
+        @media (max-width: 768px) {
+            .pro-topbar { padding: 16px 20px; }
+            .pro-hero-inner {
+                flex-direction: column;
+                text-align: center;
+                padding: 80px 24px 40px;
+                gap: 24px;
+            }
+            .pro-hero-mobile-title { display: block; order: 1; margin-bottom: -10px; }
+            .pro-hero-visual { width: 320px; margin: 0 auto; order: 2; }
+            .pro-hero-text > h1,
+            .pro-hero-text > .pro-hero-subtitle { display: none; }
+            .pro-hero-text { order: 3; }
+            .pro-hero-visual::before { width: 300px; height: 300px; }
+            .pro-bottle-canvas { width: 200px; }
+            .pro-bottle-fallback { width: 200px; }
+            .pro-hero h1 { font-size: 1.8rem; max-width: none; }
+            .pro-hero-subtitle { max-width: none; }
+            .pro-hero-benefits { align-items: flex-start; text-align: left; margin: 0 auto 32px; }
+            .pro-hero-ctas { justify-content: center; }
+            .pro-hero-ingredients { text-align: left; max-width: 400px; margin: 0 auto 20px; }
+            .pro-hero-nutri-link { justify-content: center; }
+            .pro-hero-formats-badges { flex-wrap: wrap; }
+            .pro-features-inner { padding: 0 20px; }
+            .pro-feature-item { padding: 24px 16px; }
+            .pro-feature-value { font-size: 1.2rem; }
+            .pro-usages { padding: 60px 20px; }
+            .pro-usages-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .pro-usage-card { padding: 28px 16px; }
+            .pro-composition { padding: 40px 20px; }
+            .pro-compo-card { padding: 28px 24px; }
+            .pro-formats { padding: 60px 20px; }
+            .pro-formats-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+            .pro-format-card { padding: 24px 16px; }
+            .pro-format-volume { font-size: 1.6rem; }
+            .pro-distributors { padding: 50px 20px; }
+            .pro-distributors-grid { gap: 16px; }
+            .pro-distributor-link { padding: 20px 24px; min-width: 140px; min-height: 80px; }
+            .pro-trust { padding: 60px 20px 20px; }
+            .pro-trust-right { padding: 28px 24px; }
+            .pro-download { padding: 40px 20px; }
+            .pro-download-card { border-radius: 20px; }
+            .pro-download-card { padding: 32px 24px; }
+            .pro-download-form { flex-direction: column; }
+            .pro-download-form input { width: 100%; font-size: 16px; box-sizing: border-box; }
+            .pro-section-title { font-size: 1.5rem; }
+            .pro-footer { padding: 30px 20px; }
+            .pro-footer-inner { flex-direction: column; align-items: center; gap: 16px; }
+        }
+        @media (max-width: 480px) {
+            .pro-hero h1 { font-size: 1.5rem; }
+            .pro-hero-subtitle { font-size: 1rem; }
+            .pro-hero-visual { width: 280px; }
+            .pro-hero-visual::before { width: 260px; height: 260px; }
+            .pro-bottle-canvas { width: 180px; }
+            .pro-bottle-fallback { width: 180px; }
+            .pro-format-badge { font-size: 0.8rem; padding: 6px 14px; }
+            .pro-features-inner { grid-template-columns: 1fr 1fr; }
+            .pro-usages-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .pro-usage-card { padding: 20px 12px; border-radius: 14px; }
+            .pro-usage-icon { width: 48px; height: 48px; }
+            .pro-usage-icon svg { width: 36px; height: 36px; }
+            .pro-nutri-grid { grid-template-columns: 1fr; }
+            .pro-formats-grid { gap: 10px; }
+            .pro-format-card { padding: 20px 12px; border-radius: 14px; }
+            .pro-format-volume { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ════ HERO ════ -->
+    <header class="pro-hero">
+        <nav class="pro-topbar">
+            <a href="index.html" class="pro-topbar-back">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5m0 0l7 7m-7-7l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Retour au site
+            </a>
+            <img src="assets/images/Holeopng.webp" alt="Holéo" class="pro-topbar-logo">
+        </nav>
+        <div class="pro-hero-inner">
+            <!-- Mobile only: title above bottle -->
+            <div class="pro-hero-mobile-title">
+                <h1>HOLÉO GOURMET</h1>
+                <p class="pro-hero-subtitle">La saveur du beurre, les avantages<br>de l'huile</p>
+            </div>
+            <!-- LEFT: Bottle with decorative circle -->
+            <div class="pro-hero-visual">
+                <canvas id="pro-bottle-canvas" width="500" height="1244" class="pro-bottle-canvas" aria-label="Bouteille Holéo en rotation 3D"></canvas>
+                <img src="assets/images/bouteille-entiere.webp" alt="Bouteille Holéo" class="pro-bottle-fallback" loading="lazy">
+                <div class="pro-hero-formats">
+                    <div class="pro-hero-formats-label">Disponible en :</div>
+                    <div class="pro-hero-formats-badges">
+                        <span class="pro-format-badge">1L</span>
+                        <span class="pro-format-badge">3L</span>
+                        <span class="pro-format-badge">5L</span>
+                        <span class="pro-format-badge">25L</span>
+                        <span class="pro-format-badge">200L</span>
+                        <span class="pro-format-badge">1000L</span>
+                    </div>
+                </div>
+            </div>
+            <!-- RIGHT: Product info -->
+            <div class="pro-hero-text">
+                <h1>HOLÉO GOURMET</h1>
+                <p class="pro-hero-subtitle">La saveur du beurre, les avantages de l'huile</p>
+                <ul class="pro-hero-benefits">
+                    <li>La délicate saveur beurre, 100% végétale</li>
+                    <li>Multi-usages : cuisson, enrobage, graissage…</li>
+                    <li>Une composition unique : sans ajout de sel, de lécithine, de colorant ni de lactose !</li>
+                    <li>Une utilisation &amp; un stockage facilités : ne nécessite pas d'être fondue car liquide &amp; se conserve à température ambiante</li>
+                    <li>Ne noircit pas en cuisson jusqu'à 180°C</li>
+                </ul>
+                <div class="pro-hero-ingredients">
+                    <h3>Ingrédients</h3>
+                    <p>Huile de tournesol, huile de colza, arôme naturel.</p>
+                </div>
+                <a href="#compo" class="pro-hero-nutri-link">
+                    Données nutritionnelles pour 100 ml
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <div class="pro-hero-ctas">
+                    <a href="#echantillon" class="pro-hero-cta">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Demande d'échantillon
+                    </a>
+                    <a href="assets/Holeo.pdf" download="Holeo-Fiche-Technique.pdf" class="pro-hero-cta">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Fiche technique
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ════ FEATURES ════ -->
+    <section class="pro-features">
+        <div class="pro-features-inner">
+            <div class="pro-feature-item">
+                <div class="pro-feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0L12 2.69z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="pro-feature-value">-40%</div>
+                <div class="pro-feature-label">de matière grasse</div>
+            </div>
+            <div class="pro-feature-item">
+                <div class="pro-feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="pro-feature-value">18 mois</div>
+                <div class="pro-feature-label">de conservation</div>
+            </div>
+            <div class="pro-feature-item">
+                <div class="pro-feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M6 13.87A4 4 0 017.41 6a5.11 5.11 0 019.18 0A4 4 0 0118 13.87V21H6v-7.13z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 21h8M8 17h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <div class="pro-feature-value">3 en 1</div>
+                <div class="pro-feature-label">cuisson, rôtissage, pâtisserie</div>
+            </div>
+            <div class="pro-feature-item">
+                <div class="pro-feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.25 3.75 1.25 3.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="pro-feature-value">100%</div>
+                <div class="pro-feature-label">végétal, goût beurre</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ USAGES ════ -->
+    <section class="pro-usages">
+        <div class="pro-usages-inner">
+            <div class="pro-section-header">
+                <span class="pro-section-tag">Multi-usages</span>
+                <h2 class="pro-section-title">Une huile, tous les usages</h2>
+            </div>
+            <div class="pro-usages-grid">
+                <div class="pro-usage-card">
+                    <div class="pro-usage-icon">
+                        <img src="assets/images/recipe-pates.webp" alt="Pâtes" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                    </div>
+                    <h3>Cuisson</h3>
+                    <p>Saisir, poêler, griller jusqu'à 180 °C sans noircir</p>
+                </div>
+                <div class="pro-usage-card">
+                    <div class="pro-usage-icon">
+                        <img src="assets/images/recipe-mini-cakes-orange.webp" alt="Mini cakes" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                    </div>
+                    <h3>Pâtisserie</h3>
+                    <p>Brioches, cakes, viennoiseries avec le goût beurre</p>
+                </div>
+                <div class="pro-usage-card">
+                    <div class="pro-usage-icon">
+                        <img src="assets/images/recipe-legumes-rotis.webp" alt="Légumes rôtis" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                    </div>
+                    <h3>Rôtissage</h3>
+                    <p>Idéale pour le rôtissage et les plats au four</p>
+                </div>
+                <div class="pro-usage-card">
+                    <div class="pro-usage-icon">
+                        <img src="assets/images/recipe-haricots.webp" alt="Haricots verts" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                    </div>
+                    <h3>Enrobage</h3>
+                    <p>Enrober les aliments avant cuisson ou friture</p>
+                </div>
+                <div class="pro-usage-card">
+                    <div class="pro-usage-icon">
+                        <img src="assets/images/recipe-hollandaise.webp" alt="Sauce hollandaise" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                    </div>
+                    <h3>Sauces</h3>
+                    <p>Élaborer des sauces et émulsions gourmandes</p>
+                </div>
+                <div class="pro-usage-card">
+                    <div class="pro-usage-icon">
+                        <img src="assets/images/Gateau-Cookeo-avec-moule-500x375.webp" alt="Gâteau Cookeo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+                    </div>
+                    <h3>Graissage</h3>
+                    <p>Graisser moules, plaques et plats de cuisson</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ COMPOSITION ════ -->
+    <section class="pro-composition" id="compo">
+        <div class="pro-compo-card">
+            <div class="pro-compo-block">
+                <h3>Ingrédients</h3>
+                <p>Huile de tournesol, huile de colza, arôme naturel de beurre.</p>
+                <p style="margin-top:16px; font-size:0.85rem; color:#999;">Sans sel · Sans lécithine · Sans colorant · Sans lactose · Sans conservateur · Sans OGM</p>
+                <div style="margin-top:20px; padding-top:18px; border-top:1px solid rgba(0,0,0,.06);">
+                    <h3>Caractéristiques techniques</h3>
+                    <div class="pro-nutri-grid" style="margin-top:8px;">
+                        <div class="pro-nutri-item"><span>Point de fumée</span><span>180 °C</span></div>
+                        <div class="pro-nutri-item"><span>Aspect</span><span>Liquide jaune clair</span></div>
+                        <div class="pro-nutri-item"><span>Densité</span><span>0,92</span></div>
+                        <div class="pro-nutri-item"><span>Conservation</span><span>12 mois</span></div>
+                        <div class="pro-nutri-item"><span>Stockage</span><span>Sec, < 25 °C</span></div>
+                        <div class="pro-nutri-item"><span>Origine</span><span>France 🇫🇷</span></div>
+                    </div>
+                </div>
+                <div style="margin-top:20px; padding-top:18px; border-top:1px solid rgba(0,0,0,.06);">
+                    <h3>Allergènes</h3>
+                    <p style="margin-top:6px;">Aucun allergène à déclaration obligatoire. Sans gluten, sans lait, sans œuf, sans fruits à coque.</p>
+                </div>
+            </div>
+            <div class="pro-compo-divider"></div>
+            <div class="pro-compo-block">
+                <h3>Valeurs nutritionnelles / 100 ml</h3>
+                <div class="pro-nutri-grid" style="grid-template-columns: 1fr;">
+                    <div class="pro-nutri-item"><span>Énergie</span><span>3 389 kJ / 824 kcal</span></div>
+                    <div class="pro-nutri-item"><span>Matières grasses</span><span>92 g</span></div>
+                    <div class="pro-nutri-item" style="padding-left:16px; color:#888;"><span>dont acides gras saturés</span><span>9,1 g</span></div>
+                    <div class="pro-nutri-item" style="padding-left:16px; color:#888;"><span>dont acides gras mono-insaturés</span><span>33 g</span></div>
+                    <div class="pro-nutri-item" style="padding-left:16px; color:#888;"><span>dont acides gras poly-insaturés</span><span>50 g</span></div>
+                    <div class="pro-nutri-item"><span>Glucides</span><span>0 g</span></div>
+                    <div class="pro-nutri-item" style="padding-left:16px; color:#888;"><span>dont sucres</span><span>0 g</span></div>
+                    <div class="pro-nutri-item"><span>Fibres alimentaires</span><span>0 g</span></div>
+                    <div class="pro-nutri-item"><span>Protéines</span><span>0 g</span></div>
+                    <div class="pro-nutri-item"><span>Sel</span><span>0 g</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ FORMATS ════ -->
+    <section class="pro-formats">
+        <div class="pro-section-header">
+            <span class="pro-section-tag">Nos formats</span>
+            <h2 class="pro-section-title">Adapté à tous les volumes</h2>
+        </div>
+        <div class="pro-formats-grid">
+            <div class="pro-format-card">
+                <div class="pro-format-volume">3L</div>
+                <div class="pro-format-type">Bidon plastique</div>
+            </div>
+            <div class="pro-format-card">
+                <div class="pro-format-volume">25L</div>
+                <div class="pro-format-type">Bidon</div>
+            </div>
+            <div class="pro-format-card">
+                <div class="pro-format-volume">200L</div>
+                <div class="pro-format-type">Fût</div>
+            </div>
+            <div class="pro-format-card">
+                <div class="pro-format-volume">1000L</div>
+                <div class="pro-format-type">IBC</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ DISTRIBUTEURS ════ -->
+    <section class="pro-distributors">
+        <div class="pro-section-header">
+            <span class="pro-section-tag">Distribution</span>
+            <h2 class="pro-section-title">Nos distributeurs</h2>
+        </div>
+        <div class="pro-distributors-grid">
+            <a href="https://sysco.fr" target="_blank" rel="noopener" class="pro-distributor-link" aria-label="Sysco">
+                <img src="assets/images/logo-sysco.png" alt="Sysco">
+            </a>
+            <a href="https://www.episaveurs.fr" target="_blank" rel="noopener" class="pro-distributor-link" aria-label="EpiSaveurs">
+                <img src="assets/images/logo-episaveurs.png" alt="EpiSaveurs">
+            </a>
+            <a href="https://www.proapro.fr" target="_blank" rel="noopener" class="pro-distributor-link" aria-label="Pro à Pro">
+                <img src="assets/images/logo-proapro.svg" alt="Pro à Pro">
+            </a>
+        </div>
+    </section>
+
+    <!-- ════ TRUST + FORM ════ -->
+    <section class="pro-trust" id="echantillon">
+        <div class="pro-trust-inner">
+            <div class="pro-trust-left">
+                <span class="pro-section-tag">Confiance</span>
+                <h2 class="pro-section-title" style="text-align:left; margin-top:12px;">Ils cuisinent avec Holéo</h2>
+                <ul class="pro-trust-clients">
+                    <li>Hôpitaux</li>
+                    <li>Restauration collective</li>
+                    <li>Traiteurs</li>
+                    <li>Food service</li>
+                    <li>Industrie agroalimentaire</li>
+                    <li>Boulangeries</li>
+                    <li>Pâtisseries</li>
+                    <li>EHPAD</li>
+                </ul>
+            </div>
+            <div class="pro-trust-right">
+                <h3 class="pro-form-title">Demande d'échantillon</h3>
+                <p class="pro-form-subtitle">Nous vous recontacterons sous 48h.</p>
+                <form class="pro-form" id="pro-form">
+                    <input type="text" name="name" placeholder="Votre nom" required>
+                    <input type="email" name="email" placeholder="Votre email professionnel" required>
+                    <input type="text" name="company" placeholder="Votre entreprise" required>
+                    <textarea name="message" placeholder="Décrivez votre besoin (volume, fréquence, usage...)"></textarea>
+                    <button type="submit" class="pro-form-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        Envoyer la demande
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ DOWNLOAD ════ -->
+    <section class="pro-download">
+        <div class="pro-download-card">
+            <div class="pro-download-text">
+                <h3>Fiche technique</h3>
+                <p>Téléchargez la fiche complète : composition, valeurs nutritionnelles, conditions de conservation et certifications.</p>
+            </div>
+            <div class="pro-download-form" id="pro-download-form">
+                <input type="email" id="pro-download-email" placeholder="Votre email professionnel" required>
+                <button type="button" class="pro-download-btn" id="pro-download-confirm">
+                    <svg viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Télécharger
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ FOOTER ════ -->
+    <footer class="pro-footer">
+        <div class="pro-footer-inner">
+            <div class="pro-footer-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <a href="mailto:contact@holeo.fr">contact@holeo.fr</a>
+            </div>
+            <div class="pro-footer-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <a href="tel:+33629470160">+33 6 29 47 01 60</a>
+            </div>
+            <div class="pro-footer-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+                <span>38 Av. Charles de Gaulle, 03120 Lapalisse</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+    (function() {
+        var SID = 'service_71mrtyn', TID = 'template_upuy2vi', PK = '93Jy4abi8SpoPngB6';
+
+        // Form
+        var form = document.getElementById('pro-form');
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            var btn = form.querySelector('.pro-form-btn');
+            btn.disabled = true; btn.textContent = 'Envoi...';
+            var fd = new FormData(form);
+            fd.append('subject', "Holéo Pro - Demande d'échantillon");
+            var params = {}; fd.forEach(function(v, k) { params[k] = v; });
+            try {
+                await emailjs.send(SID, TID, params, { publicKey: PK });
+                form.reset();
+                btn.textContent = 'Envoyé !'; btn.style.background = '#3B7D23';
+                setTimeout(function() { btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg> Envoyer la demande'; btn.style.background = ''; btn.disabled = false; }, 3000);
+            } catch (err) {
+                btn.textContent = 'Erreur, réessayez'; btn.style.background = '#c0392b';
+                setTimeout(function() { btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg> Envoyer la demande'; btn.style.background = ''; btn.disabled = false; }, 3000);
+            }
+        });
+
+        // Download
+        var dlEmail = document.getElementById('pro-download-email');
+        var dlBtn = document.getElementById('pro-download-confirm');
+        dlBtn.addEventListener('click', function() {
+            var email = dlEmail.value.trim();
+            if (!email || !dlEmail.checkValidity()) { dlEmail.reportValidity(); return; }
+            var a = document.createElement('a');
+            a.href = 'assets/Holeo.pdf'; a.download = 'Holeo-Fiche-Technique.pdf'; a.click();
+            dlBtn.textContent = 'Téléchargé !';
+            setTimeout(function() { dlBtn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg> Télécharger'; }, 2000);
+        });
+    })();
+
+    // Bottle 3D rotation (auto-spin)
+    (function () {
+        var canvas = document.getElementById('pro-bottle-canvas');
+        if (!canvas) return;
+        var ctx = canvas.getContext('2d');
+        var TOTAL_FRAMES = 60;
+        var frames = [];
+        var loaded = 0;
+        var ready = false;
+        var currentFrame = 0;
+
+        for (var i = 1; i <= TOTAL_FRAMES; i++) {
+            var img = new Image();
+            img.src = 'assets/images/bottle-frames/frame_' + String(i - 1).padStart(4, '0') + '.webp';
+            img.onload = function () {
+                loaded++;
+                if (loaded === TOTAL_FRAMES) {
+                    ready = true;
+                    var fallback = document.querySelector('.pro-bottle-fallback');
+                    if (fallback) fallback.style.display = 'none';
+                    canvas.style.display = 'block';
+                    drawFrame(0);
+                    startAutoSpin();
+                }
+            };
+            frames.push(img);
+        }
+
+        function drawFrame(index) {
+            var img = frames[index];
+            if (!img || !img.complete) return;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        }
+
+        function startAutoSpin() {
+            var lastTime = 0;
+            var frameInterval = 50;
+            function animate(timestamp) {
+                if (timestamp - lastTime >= frameInterval) {
+                    currentFrame = (currentFrame + 1) % TOTAL_FRAMES;
+                    drawFrame(currentFrame);
+                    lastTime = timestamp;
+                }
+                requestAnimationFrame(animate);
+            }
+            requestAnimationFrame(animate);
+        }
+    })();
+    </script>
+</body>
+</html>
